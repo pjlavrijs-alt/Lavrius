@@ -10,14 +10,20 @@ Statische one-pager voor offirent.be: `index.html` + `media/`. Geen build-stap �
 ## Chatbot
 `netlify/functions/chat.mjs` (endpoint `/api/chat`) gebruikt Claude via de Netlify AI Gateway — geen eigen API-sleutel nodig, kosten lopen via Netlify-credits. Rate limit: 20 berichten/minuut per IP. Valt de AI weg, dan antwoordt de chat met vaste antwoorden uit `index.html` (zoek `const faq`). De feiten die de bot kent staan in `SYSTEM` in de functie — pas die aan als prijzen of diensten veranderen.
 
-## Formulier
-Aanvragen gaan naar Netlify Forms (formulier `aanvraag`). Stel in Netlify een e-mailnotificatie in naar info@offirent.be.
+## Aanvragen → info@offirent.be
+Twee Netlify-formulieren:
+- `aanvraag` — het contactformulier onderaan de pagina
+- `chat-lead` — een chatgesprek waarin de bezoeker een telefoonnummer of e-mailadres achterlaat (volledig gesprek wordt meegestuurd)
+
+**Verplicht in te stellen:** Netlify → project `offirent-concept` → Project configuration → Notifications → Emails and webhooks → *Form submission notifications* → Add notification → Email notification → Event: *New form submission*, Form: *Any form*, E-mail: `info@offirent.be`.
+
+## Reviews
+Sectie `#reviews` linkt naar het Google-bedrijfsprofiel. Score, aantal en citaten vul je in via `const GOOGLE` in `index.html` (alleen echte, letterlijke Google-reviews).
 
 ## Nog te doen vóór livegang
 - Teamfoto's van Davy, Anja en Michel: op offirent.be bestaan die enkel als 46×56 px; nu zeshoek-monogrammen.
 - "Je vaste aanspreekpunt: An Vaes" is een aanname — bevestigen.
-- Prijzen van dagkantoor, vast kantoor en vergaderzaal toevoegen (nu enkel virtueel kantoor vanaf €80).
-- Reviews (Google) verzamelen en tonen.
+- Google-score, aantal reviews en 2–4 citaten invullen in `const GOOGLE`.
 - Eigen video van het kantoor in Herk-de-Stad zou sterker zijn dan stockbeelden.
 
 ## Bronnen media
