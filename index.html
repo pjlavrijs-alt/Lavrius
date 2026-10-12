@@ -1,358 +1,437 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl-BE">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>offiRent — Virtueel kantoor, flexplek &amp; vergaderzaal in Limburg</title>
-<meta name="description" content="Virtueel kantoor, maatschappelijke zetel, dagkantoor, vast kantoor en vergaderzaal in Herk-de-Stad. Erkend dienstverlener sinds 1997. Iedereen zelfstandig.">
+<title>offiRent — Virtueel kantoor vanaf €80/maand in Limburg</title>
+<meta name="description" content="Maatschappelijke zetel en virtueel kantoor vanaf €80 per maand in Herk-de-Stad. Dagkantoor, vast kantoor, vergaderzaal voor 10 personen en therapieruimte. Erkend dienstverlener sinds 1997.">
+<meta name="theme-color" content="#0c0d0c">
+<link rel="canonical" href="https://www.offirent.be/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_BE">
+<meta property="og:site_name" content="offiRent">
+<meta property="og:title" content="offiRent — Iedereen zelfstandig. Wij doen de rest.">
+<meta property="og:description" content="Virtueel kantoor vanaf €80/maand, flexplek, vast kantoor en vergaderzaal in Herk-de-Stad. Je thuisadres blijft privé.">
+<meta property="og:image" content="https://offirent-concept.netlify.app/media/img/gebouw.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preload" as="image" href="media/hero-kantoor-poster.webp" fetchpriority="high">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Cpath d=%22M16 1l13.9 8v16L16 33 2.1 25V9z%22 fill=%22%236dcd7c%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"offiRent BV","description":"Virtuele kantoren, maatschappelijke zetel, flexibele werkruimtes en vergaderzaal in Limburg.","url":"https://www.offirent.be/","telephone":"+32 13 26 10 10","email":"info@offirent.be","vatID":"BE0866726672","foundingDate":"1997","image":"https://offirent-concept.netlify.app/media/img/gebouw.webp","priceRange":"Vanaf €80/maand","address":{"@type":"PostalAddress","streetAddress":"Steenweg 3","postalCode":"3540","addressLocality":"Herk-de-Stad","addressRegion":"Limburg","addressCountry":"BE"},"geo":{"@type":"GeoCoordinates","latitude":50.9478051,"longitude":5.2171074},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:00"}]}
+</script>
 <style>
 :root{
-  --ink:#0c0d0c;
-  --ink-2:#151715;
-  --ink-3:#1f231f;
-  --paper:#fff8f2;
-  --paper-2:#fff1e6;
-  --white:#ffffff;
-  --muted:#6b7280;
-  --muted-dark:#9aa3b2;
-  --accent:#6dcd7c;
-  --accent-ink:#2f8a3d;
-  --accent-2:#a8e6b2;
-  --accent-soft:#e6ffcc;
-  --line:rgba(12,13,12,.1);
-  --line-dark:rgba(255,255,255,.1);
-  --radius:22px;
-  --radius-sm:14px;
-  --max:1200px;
+  --ink:#0c0d0c;--ink-2:#151715;--ink-3:#1f231f;
+  --paper:#fff8f2;--paper-2:#fff1e6;--white:#fff;
+  --muted:#5f6670;--muted-dark:#9ca39c;
+  --accent:#6dcd7c;--accent-ink:#2f8a3d;--accent-2:#a8e6b2;--accent-soft:#e6ffcc;
+  --line:rgba(12,13,12,.1);--line-dark:rgba(255,255,255,.1);
+  --radius:22px;--radius-sm:14px;--max:1200px;
   --ease:cubic-bezier(.2,.7,.2,1);
+  --display:"Archivo Black",Inter,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
 body{font-family:Inter,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-.serif{color:var(--accent-ink)}
-.dark .serif,.hero .serif,.t-big .serif,.result .serif,.final .serif{color:var(--accent)}
-.display{font-family:"Archivo Black",Inter,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.01em}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 @media (max-width:600px){.wrap{padding:0 16px}}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--accent);color:var(--ink);padding:10px 16px;border-radius:10px;font-weight:700}
+.skip:focus{top:12px}
+.hl{color:var(--accent-ink)}
+.dark .hl,.hero .hl,.on-dark .hl{color:var(--accent)}
+.ico-i{width:1em;height:1em;flex:none}
 
-/* ---------- progress + header ---------- */
+/* progress + header */
 .progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:100}
-header.site{position:fixed;top:16px;left:0;right:0;z-index:90;padding:0 16px;pointer-events:none}
-.nav{pointer-events:auto;max-width:1060px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:20px;padding:0 8px 0 20px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);color:#fff;transition:background .4s var(--ease),color .4s,border-color .4s,box-shadow .4s}
-header.site.scrolled .nav{background:rgba(246,243,238,.88);border-color:var(--line);color:var(--ink);box-shadow:0 12px 40px -18px rgba(12,13,12,.35)}
-.logo{font-weight:800;font-size:22px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
-.logo-mark{width:30px;height:30px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:15px;font-weight:800}
-.logo{background:#fff;border-radius:999px;padding:5px 14px;margin-left:-12px}
+header.site{position:fixed;top:16px;left:0;right:0;z-index:90;padding:0 16px;pointer-events:none;transition:transform .4s var(--ease)}
+header.site.hide{transform:translateY(-120%)}
+.nav{pointer-events:auto;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px;padding:0 8px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);color:#fff;transition:background .4s var(--ease),color .4s,border-color .4s,box-shadow .4s}
+header.site.scrolled .nav{background:rgba(255,248,242,.9);border-color:var(--line);color:var(--ink);box-shadow:0 12px 40px -18px rgba(12,13,12,.35)}
+.logo{display:inline-flex;align-items:center;background:#fff;border-radius:999px;padding:6px 14px}
 .logo img{height:30px;width:auto}
-.footer-logo{margin-left:0;display:inline-flex;border-radius:14px;padding:10px 16px}
-.footer-logo img{height:38px}
-.nav-links{display:flex;gap:4px;list-style:none}
-.nav-links a{padding:8px 12px;border-radius:999px;font-weight:600;font-size:14px;opacity:.85;transition:opacity .2s,background .2s}
-.nav-links a:hover{opacity:1;background:rgba(127,127,127,.12)}
+.nav-links{display:flex;gap:2px;list-style:none}
+.nav-links a{padding:8px 12px;border-radius:999px;font-weight:600;font-size:14px;opacity:.82;transition:opacity .2s,background .2s}
+.nav-links a:hover,.nav-links a.active{opacity:1;background:rgba(127,127,127,.14)}
 .nav-cta{display:flex;align-items:center;gap:12px}
-.nav-cta .btn{padding:11px 18px;border-radius:999px}
-.phone{font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px}
-.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:14px;font-weight:700;font-size:15px;transition:transform .25s var(--ease),background .25s,box-shadow .25s,color .25s;white-space:nowrap}
-.btn:hover{transform:translateY(-2px)}
-.btn-accent{background:var(--accent);color:var(--ink);box-shadow:0 10px 30px -10px rgba(109,205,124,.7)}
-.btn-accent:hover{box-shadow:0 16px 40px -10px rgba(109,205,124,.8)}
-.btn-ghost{border:1px solid currentColor;opacity:.9}
-.btn-ghost:hover{opacity:1}
-.btn-dark{background:var(--ink);color:#fff}
-.btn .arr{transition:transform .25s var(--ease)}
-.btn:hover .arr{transform:translateX(4px)}
-.burger{display:none;width:44px;height:44px;border-radius:12px;align-items:center;justify-content:center}
-.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2px;background:currentColor;position:relative;transition:transform .3s}
+.phone{font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+.dot.off{background:#9ca3af;animation:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}70%{box-shadow:0 0 0 10px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.burger{display:none;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:2px;background:currentColor;position:relative}
 .burger span::before,.burger span::after{content:"";position:absolute}
 .burger span::before{top:-6px}.burger span::after{top:6px}
-@media (max-width:980px){
-  .nav-links,.phone{display:none}
-  .burger{display:flex}
-  .nav-cta .btn{display:none}
-  .nav{padding:0 6px 0 18px}
-}
-.mobile-menu{position:fixed;inset:0;background:var(--ink);color:#fff;z-index:95;padding:100px 24px 40px;display:flex;flex-direction:column;gap:8px;transform:translateY(-100%);transition:transform .5s var(--ease)}
-.mobile-menu.open{transform:none}
+@media (max-width:1040px){.nav-links{display:none}.burger{display:flex}}
+@media (max-width:640px){.phone,.nav-cta .btn{display:none}}
+.mobile-menu{position:fixed;inset:0;background:var(--ink);color:#fff;z-index:95;padding:96px 24px 40px;display:flex;flex-direction:column;gap:4px;transform:translateY(-100%);transition:transform .5s var(--ease);overflow:auto}
 .mobile-menu[hidden]{display:none}
-.mobile-menu a{font-size:32px;font-weight:700;letter-spacing:-.02em;padding:6px 0;border-bottom:1px solid var(--line-dark)}
-.mobile-menu .btn{margin-top:24px;align-self:flex-start;font-size:17px}
-.close-menu{position:absolute;top:18px;right:16px;width:44px;height:44px;font-size:28px;color:#fff}
+.mobile-menu.open{transform:none}
+.mobile-menu a.big{font-family:var(--display);text-transform:uppercase;font-size:30px;padding:10px 0;border-bottom:1px solid var(--line-dark)}
+.mobile-menu .btn{margin-top:24px;align-self:flex-start}
+.close-menu{position:absolute;top:22px;right:20px;width:44px;height:44px;font-size:30px;color:#fff}
 
-/* ---------- hero ---------- */
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:14px;font-weight:700;font-size:15px;transition:transform .25s var(--ease),background .25s,box-shadow .25s,color .25s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:none}
+.btn .arr{transition:transform .25s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-accent{background:var(--accent);color:var(--ink);box-shadow:0 10px 30px -12px rgba(109,205,124,.9)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#fff;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.btn-glass:hover{background:rgba(255,255,255,.2)}
+.btn-line{border:1px solid currentColor}
+.nav-cta .btn{padding:11px 18px;border-radius:999px}
+
+/* hero */
 .hero{position:relative;min-height:100vh;min-height:100svh;background:var(--ink) url("media/hero-kantoor-poster.webp") center/cover;color:#fff;overflow:hidden;display:flex;flex-direction:column}
-.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(var(--zoom,1.06));transition:transform .1s linear}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,13,12,.72) 0%,rgba(12,13,12,.45) 38%,rgba(12,13,12,.55) 70%,var(--ink) 100%)}
-.hero-content{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 16px 40px}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(var(--zoom,1.04))}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,13,12,.72) 0%,rgba(12,13,12,.42) 40%,rgba(12,13,12,.55) 72%,var(--ink) 100%)}
+.hero-content{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 16px 36px}
 .badge{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 7px;border:1px solid rgba(255,255,255,.22);border-radius:999px;font-size:13px;font-weight:600;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .badge i{font-style:normal;background:var(--accent);color:var(--ink);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700}
-.hero h1{font-family:"Archivo Black",Inter,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(40px,min(7vw,11.5vh),108px);line-height:.92;letter-spacing:-.015em;margin:26px 0 24px;text-shadow:0 4px 40px rgba(0,0,0,.35)}
-.hero h1 .serif{color:var(--accent)}
+.hero h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(40px,min(7vw,11.5vh),108px);line-height:.92;letter-spacing:-.015em;margin:26px 0 22px;text-shadow:0 4px 40px rgba(0,0,0,.35)}
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
 .hero h1 .line>span{display:inline-block;transform:translateY(110%);animation:rise 1s var(--ease) forwards}
 .hero h1 .line:nth-child(2)>span{animation-delay:.12s}
 @keyframes rise{to{transform:none}}
-.hero p.lead{font-size:clamp(17px,1.5vw,20px);color:#e3e7ee;max-width:620px;opacity:0;animation:fade .9s .45s var(--ease) forwards}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:34px;opacity:0;animation:fade .9s .6s var(--ease) forwards}
-.btn-glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.btn-glass:hover{background:rgba(255,255,255,.2)}
-.hero-note{margin-top:16px;font-size:14px;color:#c9d1dc;padding:10px 16px;border-radius:12px;background:rgba(12,13,12,.35);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;animation:fade .9s .75s var(--ease) forwards}
+.hero p.lead{font-size:clamp(17px,1.5vw,20px);color:#e6ebe6;max-width:640px;opacity:0;animation:fade .9s .45s var(--ease) forwards}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:32px;opacity:0;animation:fade .9s .6s var(--ease) forwards}
+.hero-proof{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:26px;font-size:14px;font-weight:600;color:#dfe5df;opacity:0;animation:fade .9s .75s var(--ease) forwards}
+.hero-proof span{display:inline-flex;align-items:center;gap:8px}
+.hero-proof svg{color:var(--accent)}
 @keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.vid-toggle{position:absolute;right:20px;bottom:128px;z-index:3;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;display:grid;place-items:center;backdrop-filter:blur(10px)}
+.vid-toggle{position:absolute;right:20px;bottom:120px;z-index:3;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;display:grid;place-items:center;backdrop-filter:blur(10px)}
 .hero-strip{position:relative;z-index:2;padding:0 0 30px;text-align:center}
-.hero-strip small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#aab3c2;margin-bottom:16px}
+.hero-strip small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#b7beb7;margin-bottom:14px}
 .strip-viewport{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-.strip-track{display:flex;gap:48px;width:max-content;animation:marq 40s linear infinite}
-.strip-track span{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:700;white-space:nowrap;color:#e8ecf2}
-.strip-track span::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--accent);transform:rotate(45deg)}
-@media (max-width:600px){.vid-toggle{bottom:118px;right:14px}.hero-note{font-size:13px}}
-
-/* ---------- marquee ---------- */
-.marquee{background:var(--accent);color:var(--ink);overflow:hidden;padding:18px 0;position:relative;z-index:3}
-.marquee-track{display:flex;gap:48px;width:max-content;animation:marq 38s linear infinite}
-.marquee-track span{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:-.02em;display:flex;align-items:center;gap:48px;white-space:nowrap}
-.marquee-track span::after{content:"✦";font-size:.7em;opacity:.7}
+.strip-track{display:flex;gap:44px;width:max-content;animation:marq 40s linear infinite}
+.strip-track span{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:700;white-space:nowrap;color:#eef2ee}
+.strip-track span::before{content:"";width:9px;height:10px;background:var(--accent);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
 @keyframes marq{to{transform:translateX(-50%)}}
+@media (max-width:600px){.vid-toggle{bottom:112px;right:14px}.hero-proof{font-size:13px;gap:6px 14px}}
 
-/* ---------- section basics ---------- */
-section{position:relative}
-.sec{padding:clamp(80px,11vw,150px) 0}
+/* sections */
+.sec{padding:clamp(80px,10vw,140px) 0}
+.sec.tight{padding-top:0}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
-.dark .eyebrow{color:var(--accent)}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
-h2{overflow-wrap:break-word;hyphens:auto;font-family:"Archivo Black",Inter,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(34px,4.8vw,64px);line-height:1;letter-spacing:-.01em;margin:18px 0 20px}
-h2 .serif{letter-spacing:-.01em}
+.dark .eyebrow,.on-dark .eyebrow{color:var(--accent)}
+h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(32px,4.6vw,62px);line-height:1;letter-spacing:-.01em;margin:16px 0 18px;overflow-wrap:break-word;hyphens:auto}
 .sub{font-size:18px;color:var(--muted);max-width:620px}
 .dark{background:var(--ink);color:#fff}
 .dark .sub{color:var(--muted-dark)}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
 
-/* ---------- path finder ---------- */
-.finder{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;margin-top:56px}
-@media (max-width:900px){.finder{grid-template-columns:1fr;gap:32px}}
+/* path finder */
+.finder{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start;margin-top:48px}
+@media (max-width:900px){.finder{grid-template-columns:1fr;gap:24px}}
 .choices{display:flex;flex-direction:column;gap:12px}
-.choice{display:flex;align-items:center;gap:18px;padding:22px 24px;border-radius:var(--radius);border:1px solid var(--line);background:var(--white);text-align:left;transition:all .35s var(--ease)}
+.choice{display:flex;align-items:center;gap:18px;padding:20px 22px;border-radius:var(--radius);border:1px solid var(--line);background:var(--white);text-align:left;transition:all .35s var(--ease)}
 .choice:hover{border-color:var(--ink);transform:translateX(4px)}
 .choice[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-.choice .n{font-family:"Archivo Black",sans-serif;font-size:26px;width:44px;color:var(--accent-ink);flex:none}
-.choice b{display:block;font-size:19px;letter-spacing:-.01em}
+.choice .n{font-family:var(--display);font-size:24px;width:40px;color:var(--accent-ink);flex:none}
+.choice[aria-selected="true"] .n{color:var(--accent)}
+.choice b{display:block;font-size:18px;letter-spacing:-.01em}
 .choice small{font-size:14px;opacity:.65}
 .choice .chev{margin-left:auto;opacity:.4;transition:transform .3s}
-.choice[aria-selected="true"] .n{color:var(--accent)}
 .choice[aria-selected="true"] .chev{opacity:1;transform:rotate(-45deg);color:var(--accent)}
-.result{position:relative;border-radius:28px;background:var(--ink);color:#fff;padding:40px;min-height:440px;overflow:hidden}
-.result::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(109,205,124,.45),transparent 65%);top:-160px;right:-140px;filter:blur(10px)}
-.panel{position:relative;display:none}
-.panel.active{display:block;animation:fade .6s var(--ease)}
-.panel .tag{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);font-size:13px;font-weight:700;margin-bottom:22px}
-.panel h3{font-family:"Archivo Black",Inter,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(28px,3.2vw,42px);letter-spacing:-.03em;line-height:1.05;margin-bottom:14px}
-.panel h3 .serif{color:var(--accent-2)}
-.panel p{color:#c4ccd8;max-width:480px}
-.panel ul{list-style:none;margin:26px 0 32px;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
-@media (max-width:600px){.panel ul{grid-template-columns:1fr}.result{padding:28px 22px}}
-.panel li{display:flex;gap:10px;font-size:15px;font-weight:600}
-.panel li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c0d0c' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.result{position:relative;border-radius:28px;background:var(--ink);color:#fff;overflow:hidden;min-height:480px;display:flex}
+.panel{position:relative;display:none;flex-direction:column;width:100%}
+.panel.active{display:flex;animation:fade .55s var(--ease)}
+.panel .ph{position:relative;height:190px;overflow:hidden}
+.panel .ph img{width:100%;height:100%;object-fit:cover}
+.panel .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--ink))}
+.panel .ph .tag{position:absolute;left:24px;top:20px;z-index:1;padding:6px 12px;border-radius:999px;background:rgba(12,13,12,.65);backdrop-filter:blur(8px);font-size:13px;font-weight:700}
+.panel .body{padding:4px 32px 32px}
+.panel h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(24px,2.6vw,34px);line-height:1.05;margin-bottom:12px}
+.panel p{color:#c9cfc9;max-width:520px}
+.panel ul{list-style:none;margin:20px 0 26px;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}
+.panel li,.ticks li{display:flex;gap:10px;font-size:15px;font-weight:600}
+.panel li::before,.ticks li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c0d0c' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/11px no-repeat}
+.panel .acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.panel .price{font-weight:700;color:var(--accent)}
+@media (max-width:600px){.panel ul{grid-template-columns:1fr}.panel .body{padding:4px 22px 26px}.panel .ph{height:150px}}
 
-/* ---------- services bento ---------- */
-.bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:minmax(220px,auto);gap:16px;margin-top:56px}
-.tile{position:relative;border-radius:var(--radius);padding:28px;background:var(--white);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
-.tile:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(12,13,12,.35)}
-.tile h3{font-size:24px;letter-spacing:-.02em;line-height:1.15;margin-top:8px}
-.tile p{color:var(--muted);font-size:15px;margin-top:8px;max-width:420px}
-.tile .meta{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:22px}
-.tile .go{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:all .35s var(--ease)}
-.tile:hover .go{background:var(--ink);border-color:var(--ink);color:#fff;transform:rotate(-45deg)}
-.tile .k{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.t-big{grid-column:span 4;grid-row:span 2;background:var(--ink);color:#fff;border:0;padding:40px}
-.t-big h3{font-family:"Archivo Black",Inter,sans-serif;font-weight:400;text-transform:uppercase;hyphens:auto;overflow-wrap:break-word;font-size:clamp(24px,3.6vw,48px);letter-spacing:-.035em;max-width:520px}
-.t-big h3 .serif{color:var(--accent-2)}
-.t-big p{color:#b6bfcc;font-size:17px}
-.t-big .k{color:var(--accent-2)}
-.t-big .go{border-color:var(--line-dark)}
-.t-big:hover .go{background:var(--accent);border-color:var(--accent);color:var(--ink)}
-.t-big .visual{position:absolute;right:-60px;bottom:-60px;width:360px;height:360px;opacity:.9;pointer-events:none}
-.t-2{grid-column:span 2}
-.t-3{grid-column:span 3}
-.t-accent{background:var(--accent);color:var(--ink);border:0}
-.t-accent p,.t-accent .k{color:rgba(12,13,12,.72)}
-.t-accent .go{border-color:rgba(12,13,12,.25)}
-.t-soft{background:var(--accent-soft);border:0}
-.t-soft .k{color:var(--accent-ink)}
-.price{font-size:14px;font-weight:700}
-.price b{font-size:28px;letter-spacing:-.02em}
-@media (max-width:980px){.bento{grid-template-columns:repeat(2,1fr)}.t-big{grid-column:span 2;grid-row:span 1}.t-2,.t-3{grid-column:span 1}}
-@media (max-width:600px){.bento{grid-template-columns:1fr}.t-big,.t-2,.t-3{grid-column:span 1}.t-big{padding:28px}.t-big .visual{display:none}}
+/* tour (horizontal gallery) */
+.tour{overflow:hidden}
+.tour-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px max(24px,calc((100vw - var(--max))/2 + 24px)) 24px;scrollbar-width:none;cursor:grab;overscroll-behavior-x:contain}
+.tour-track::-webkit-scrollbar{display:none}
+.tour-track.drag{cursor:grabbing;scroll-snap-type:none}
+.shot{flex:none;width:min(420px,78vw);scroll-snap-align:center;border-radius:var(--radius);overflow:hidden;position:relative;background:var(--ink-2);user-select:none}
+.shot.wide{width:min(640px,88vw)}
+.shot img{width:100%;height:clamp(300px,52vh,480px);object-fit:cover;pointer-events:none;transition:transform 1.2s var(--ease)}
+.shot:hover img{transform:scale(1.04)}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:60px 22px 20px;background:linear-gradient(180deg,transparent,rgba(12,13,12,.9));font-size:15px;color:#d6dbd6}
+.shot figcaption b{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:20px;color:#fff;margin-bottom:2px}
+.tour-ctrl{display:flex;gap:10px}
+.tour-ctrl button{width:50px;height:50px;border-radius:50%;border:1px solid var(--line-dark);display:grid;place-items:center;color:#fff;transition:background .2s,color .2s}
+.tour-ctrl button:hover{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.tour-progress{height:2px;background:var(--line-dark);margin:6px 24px 0;max-width:calc(var(--max) - 48px);margin-inline:auto;position:relative;overflow:hidden;border-radius:2px}
+.tour-progress i{position:absolute;inset:0 auto 0 0;width:20%;background:var(--accent);transition:transform .2s}
 
-/* ---------- sticky included ---------- */
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:minmax(240px,auto);gap:16px;margin-top:48px}
+.tile{position:relative;border-radius:var(--radius);padding:26px;background:var(--white);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;text-align:left;transition:transform .5s var(--ease),box-shadow .5s var(--ease);isolation:isolate}
+.tile:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(12,13,12,.4)}
+.tile .k{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.tile h3{font-size:23px;letter-spacing:-.02em;line-height:1.15;margin-top:8px}
+.tile p{color:var(--muted);font-size:15px;margin-top:8px;max-width:440px}
+.tile .meta{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:20px}
+.tile .go{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:all .35s var(--ease);background:var(--white);color:var(--ink)}
+.tile:hover .go{background:var(--accent);border-color:var(--accent);transform:rotate(-45deg)}
+.tile.photo{color:#fff;border:0;min-height:300px}
+.tile.photo img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s var(--ease)}
+.tile.photo:hover img.bg{transform:scale(1.05)}
+.tile.photo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,13,12,.15) 0%,rgba(12,13,12,.35) 45%,rgba(12,13,12,.88) 100%)}
+.tile.photo .k{color:var(--accent);background:rgba(12,13,12,.55);backdrop-filter:blur(6px);padding:5px 10px;border-radius:999px;align-self:flex-start}
+.tile.photo p{color:#dfe4df}
+.t-big{grid-column:span 4;grid-row:span 2}
+.t-big h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(26px,3.4vw,46px);letter-spacing:-.01em;line-height:1;max-width:560px;hyphens:auto}
+.t-big p{font-size:17px}
+.t-2{grid-column:span 2}.t-3{grid-column:span 3}
+.t-accent{background:var(--accent);border:0}
+.t-accent .k{color:var(--ink)}
+.t-accent p{color:rgba(12,13,12,.75)}
+.price-tag{display:inline-flex;align-items:baseline;gap:6px;background:var(--accent);color:var(--ink);padding:8px 14px;border-radius:12px;font-weight:700;font-size:14px}
+.price-tag b{font-family:var(--display);font-weight:400;font-size:26px}
+@media (max-width:980px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}.t-big{grid-column:span 2;grid-row:span 1;min-height:420px}.t-2,.t-3{grid-column:span 1}}
+@media (max-width:600px){.t-big h3{font-size:clamp(20px,6.6vw,28px)}.bento{grid-template-columns:1fr}.t-big,.t-2,.t-3{grid-column:span 1}.tile.photo{min-height:280px}}
+
+/* included */
 .included{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}
 @media (max-width:900px){.included{grid-template-columns:1fr;gap:24px}}
-.inc-left{position:sticky;top:120px;align-self:start}
+.inc-left{position:sticky;top:110px;align-self:start}
 @media (max-width:900px){.inc-left{position:static}}
-.inc-counter{font-family:"Archivo Black",sans-serif;font-size:clamp(100px,13vw,190px);line-height:.85;color:var(--accent);margin-top:28px;}
-.inc-counter small{font-family:Inter,sans-serif;font-style:normal;font-size:16px;color:var(--muted-dark);font-weight:600;display:block;margin-top:8px}
-.inc-list{display:flex;flex-direction:column;gap:16px}
-.inc{display:flex;gap:22px;padding:30px;border-radius:var(--radius);background:var(--ink-2);border:1px solid var(--line-dark);transition:border-color .4s,background .4s}
-.inc.active{border-color:rgba(109,205,124,.5);background:var(--ink-3)}
-.inc .ic{width:52px;height:52px;border-radius:14px;background:rgba(109,205,124,.12);color:var(--accent-2);display:grid;place-items:center;flex:none}
-.inc h3{font-size:20px;letter-spacing:-.01em;margin-bottom:6px}
+.inc-visual{margin-top:28px;border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:16/10}
+.inc-visual img{width:100%;height:100%;object-fit:cover}
+.inc-visual .cnt{position:absolute;left:18px;bottom:16px;font-family:var(--display);font-size:64px;line-height:1;color:var(--accent);text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.inc-visual .cnt small{font-family:Inter,sans-serif;font-size:14px;color:#fff;font-weight:600;margin-left:6px}
+@media (max-width:900px){.inc-visual{display:none}}
+.inc-list{display:flex;flex-direction:column;gap:14px}
+.inc{display:flex;gap:20px;padding:26px;border-radius:var(--radius);background:var(--ink-2);border:1px solid var(--line-dark);transition:border-color .4s,background .4s}
+.inc.active{border-color:rgba(109,205,124,.55);background:var(--ink-3)}
+.inc .ic{width:50px;height:50px;border-radius:14px;background:rgba(109,205,124,.12);color:var(--accent);display:grid;place-items:center;flex:none}
+.inc h3{font-size:19px;letter-spacing:-.01em;margin-bottom:4px}
 .inc p{color:var(--muted-dark);font-size:15px}
 
-/* ---------- privacy split ---------- */
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:48px;counter-reset:s}
+@media (max-width:900px){.steps{grid-template-columns:1fr}}
+.step{position:relative;padding:30px;border-radius:var(--radius);background:var(--white);border:1px solid var(--line);overflow:hidden}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);font-size:72px;line-height:1;color:var(--accent-soft);-webkit-text-stroke:1.5px var(--accent-ink);display:block;margin-bottom:18px}
+.step h3{font-size:20px;letter-spacing:-.01em;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+.step .when{display:inline-block;margin-top:16px;font-size:13px;font-weight:700;color:var(--accent-ink);background:var(--accent-soft);padding:5px 10px;border-radius:999px}
+
+/* privacy compare */
 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
-@media (max-width:900px){.split{grid-template-columns:1fr;gap:40px}}
+@media (max-width:900px){.split{grid-template-columns:1fr;gap:36px}}
 .compare{position:relative;border-radius:28px;overflow:hidden;background:var(--white);border:1px solid var(--line);aspect-ratio:1/1;max-height:560px;user-select:none;touch-action:pan-y}
 .compare .side{position:absolute;inset:0;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
 .compare .before{background:var(--paper-2)}
 .compare .after{background:var(--ink);color:#fff;clip-path:inset(0 0 0 50%)}
+.before>*{max-width:46%}.after>*{max-width:46%;margin-left:auto}
 .compare .lbl{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .compare .before .lbl{color:var(--muted)}
-.compare .after .lbl{color:var(--accent-2);text-align:right}
-.kbo{background:var(--white);color:var(--ink);border-radius:var(--radius-sm);padding:22px;box-shadow:0 20px 40px -20px rgba(0,0,0,.25);font-size:14px;max-width:340px}
-.before>*{max-width:46%}.after>*{max-width:46%;margin-left:auto}
-.compare .kbo{font-size:13px;padding:16px}
-.compare .kbo .row{flex-direction:column;gap:2px}.compare .kbo .row b{text-align:left}
-.kbo .row{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-top:1px dashed var(--line)}
-.kbo .row:first-of-type{border:0}
+.compare .after .lbl{color:var(--accent);text-align:right}
+.kbo{background:var(--white);color:var(--ink);border-radius:var(--radius-sm);padding:16px;box-shadow:0 20px 40px -20px rgba(0,0,0,.25);font-size:13px}
+.kbo .row{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px dashed var(--line)}
+.kbo .row:first-child{border:0}
 .kbo .row span{color:var(--muted)}
-.kbo .row b{text-align:right}
-.kbo .warn{color:#dc2626}
+.kbo .warn{color:#c62828}
 .kbo .ok{color:var(--accent-ink)}
-.compare .big{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:-.03em;line-height:1.05;max-width:300px}
-.after .big{margin-left:auto;text-align:right}
+.compare .big{font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.after .big{text-align:right}
 .handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--accent);transform:translateX(-1px);z-index:3}
-.handle button{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--accent);color:var(--ink);display:grid;place-items:center;box-shadow:0 10px 30px -5px rgba(109,205,124,.6);cursor:ew-resize}
+.handle button{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--accent);color:var(--ink);display:grid;place-items:center;box-shadow:0 10px 30px -5px rgba(109,205,124,.7);cursor:ew-resize}
 @media (max-width:600px){
   .compare{aspect-ratio:auto;max-height:none;display:flex;flex-direction:column}
-  .compare .side{position:relative;inset:auto;gap:18px;padding:24px}
+  .compare .side{position:relative;inset:auto;gap:16px;padding:22px}
   .compare .after{clip-path:none!important}
-  .before>*,.after>*{max-width:none!important;margin-left:0!important}
+  .before>*,.after>*{max-width:none;margin-left:0}
   .after .big,.compare .after .lbl{text-align:left}
   .handle{display:none}
-  .compare .kbo .row{flex-direction:row;gap:12px}.compare .kbo .row b{text-align:right}
+  .kbo .row{flex-direction:row;justify-content:space-between;gap:12px}.kbo .row b{text-align:right}
 }
-.checks{list-style:none;margin:32px 0;display:flex;flex-direction:column;gap:16px}
+.checks{list-style:none;margin:28px 0;display:flex;flex-direction:column;gap:14px}
 .checks li{display:flex;gap:14px;font-size:17px;font-weight:600}
 .checks li svg{flex:none;color:var(--accent-ink);margin-top:3px}
 
-/* ---------- objections ---------- */
-.objs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
-@media (max-width:900px){.objs{grid-template-columns:1fr}}
-.obj{padding:34px;border-radius:var(--radius);background:var(--white);border:1px solid var(--line)}
-.obj .q{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:22px;line-height:1.15;letter-spacing:0;margin-bottom:18px}
-.obj .q::before{content:"“";color:var(--accent-ink)}
-.obj .q::after{content:"”";color:var(--accent-ink)}
-.obj p{color:var(--muted)}
-.obj p b{color:var(--ink)}
-
-/* ---------- numbers ---------- */
-.nums{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
-@media (max-width:900px){.nums{grid-template-columns:repeat(2,1fr)}}
-.num{padding:44px 28px;border-right:1px solid var(--line-dark)}
+/* numbers */
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
+@media (max-width:900px){.nums{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.num{padding:40px 26px;border-right:1px solid var(--line-dark)}
 .num:last-child{border-right:0}
 @media (max-width:900px){.num:nth-child(2){border-right:0}.num:nth-child(-n+2){border-bottom:1px solid var(--line-dark)}}
-@media (max-width:600px){.num{padding:32px 16px}}
-.num b{display:block;font-family:"Archivo Black",Inter,sans-serif;font-weight:400;font-size:clamp(44px,5.5vw,76px);letter-spacing:-.05em;line-height:1;font-weight:800}
-.num b sup{font-size:.45em;color:var(--accent);vertical-align:top;margin-left:2px}
+@media (max-width:600px){.num{padding:28px 14px}}
+.num b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(40px,5vw,70px);line-height:1;letter-spacing:-.02em}
+.num b sup,.num b sub{font-size:.42em;color:var(--accent);vertical-align:top;margin-left:2px}
 .num>span{color:var(--muted-dark);font-weight:600;font-size:15px;display:block;margin-top:10px}
 
-/* ---------- team ---------- */
-.team{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:56px}
-@media (max-width:980px){.team{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:600px){.team{grid-template-columns:repeat(2,1fr)}}
+/* faq */
+.objs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:48px}
+@media (max-width:900px){.objs{grid-template-columns:1fr}}
+.obj{padding:30px;border-radius:var(--radius);background:var(--white);border:1px solid var(--line)}
+.obj .q{font-family:var(--display);text-transform:uppercase;font-size:21px;line-height:1.15;margin-bottom:14px}
+.obj .q::before{content:"“";color:var(--accent-ink)}.obj .q::after{content:"”";color:var(--accent-ink)}
+.obj p{color:var(--muted)}
+.obj p b{color:var(--ink)}
+.acc{margin-top:40px;border-top:1px solid var(--line);max-width:900px}
+.acc details{border-bottom:1px solid var(--line)}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 4px;font-weight:700;font-size:18px}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary i{flex:none;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .3s var(--ease),background .3s}
+.acc details[open] summary i{transform:rotate(45deg);background:var(--accent);border-color:var(--accent)}
+.acc .a{padding:0 4px 22px;color:var(--muted);max-width:760px}
+.acc .a a{color:var(--accent-ink);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:48px}
+@media (max-width:980px){.team{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:600px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .member{border-radius:var(--radius);overflow:hidden;background:var(--white);border:1px solid var(--line)}
-.member .ph{aspect-ratio:4/5;display:grid;place-items:center;font-family:"Archivo Black",sans-serif;font-size:48px;color:#fff;position:relative;overflow:hidden}
-.member .ph::after{content:"Foto";position:absolute;bottom:10px;right:12px;font-family:Inter,sans-serif;font-style:normal;font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.55}
-.member:nth-child(1) .ph{background:linear-gradient(160deg,#6dcd7c,#2f8a3d)}
-.member:nth-child(2) .ph{background:linear-gradient(160deg,#1f231f,#0d1117)}
-.member:nth-child(3) .ph{background:linear-gradient(160deg,#e6ffcc,#6dcd7c);color:var(--ink)}
-.member:nth-child(4) .ph{background:linear-gradient(160deg,#2b302b,#151715)}
-.member:nth-child(5) .ph{background:linear-gradient(160deg,#369e46,#0c0d0c)}
-.member .info{padding:16px 18px 20px}
+.member .pic{aspect-ratio:1/1;display:grid;place-items:center;font-family:var(--display);font-size:44px;color:var(--ink);position:relative;overflow:hidden;background:var(--accent-soft)}
+.member .pic img{width:100%;height:100%;object-fit:cover}
+.member .pic svg.hex{position:absolute;width:70%;opacity:.5}
+.member .pic span{position:relative}
+.member:nth-child(2) .pic{background:var(--ink);color:var(--accent)}
+.member:nth-child(4) .pic{background:var(--accent);color:var(--ink)}
+.member .info{padding:14px 16px 18px}
 .member b{display:block;font-size:16px}
 .member small{color:var(--muted);font-size:13px;font-weight:600}
-
-.contact-card{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;margin-top:24px;padding:28px 32px;border-radius:var(--radius);background:var(--ink);color:#fff}
-@media (max-width:900px){.contact-card{grid-template-columns:1fr;gap:18px}}
-.contact-card .av{width:72px;height:72px;border-radius:50%;background:linear-gradient(160deg,#2b302b,#151715);display:grid;place-items:center;font-family:"Archivo Black",sans-serif;font-size:22px;border:2px solid var(--accent)}
+.contact-card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;align-items:center;margin-top:18px;padding:22px 26px;border-radius:var(--radius);background:var(--ink);color:#fff}
+@media (max-width:900px){.contact-card{grid-template-columns:auto minmax(0,1fr)}.contact-card .acts{grid-column:1/-1}}
+.contact-card img{width:76px;height:76px;border-radius:50%;object-fit:cover;border:3px solid var(--accent)}
+.contact-card b{font-size:19px}
 .contact-card p{color:var(--muted-dark);font-size:15px}
 .contact-card .acts{display:flex;gap:10px;flex-wrap:wrap}
-.chip{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;border:1px solid var(--line-dark);font-weight:700;font-size:14px;transition:all .25s}
-.chip:hover{background:#fff;color:var(--ink)}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:999px;border:1px solid var(--line-dark);font-weight:700;font-size:14px;transition:all .25s}
+.chip:hover{background:var(--accent);color:var(--ink);border-color:var(--accent)}
 
-/* ---------- community ---------- */
-.community{border-radius:32px;background:linear-gradient(135deg,#6dcd7c 0%,#4fb560 100%);color:var(--ink);padding:clamp(36px,6vw,80px);display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;overflow:hidden;position:relative}
+/* community */
+.community{border-radius:32px;background:linear-gradient(135deg,#6dcd7c 0%,#4fb560 100%);color:var(--ink);padding:clamp(32px,6vw,72px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:40px;align-items:center;overflow:hidden;position:relative}
 @media (max-width:900px){.community{grid-template-columns:1fr}}
-.community h2{margin-top:0}
-.community h2 .serif{color:#fff}
-.community .eyebrow::before{background:var(--ink)}
-.community p{font-size:18px;opacity:.9;max-width:520px}
-.community .stw{font-family:"Archivo Black",Inter,sans-serif;font-weight:400;font-size:clamp(64px,9vw,140px);font-weight:800;letter-spacing:-.06em;line-height:.8;text-align:right;opacity:.95}
-.community .stw span{display:block;line-height:1.2;margin-top:14px;font-family:Inter,sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.32em;letter-spacing:0;opacity:.85}
-.btn-white{background:var(--ink);color:#fff}
+.community h2{margin-top:12px}
+.community h2 .w{color:#fff}
+.community .eyebrow{color:var(--ink)}
+.community p{font-size:18px;max-width:520px}
+.community .stw{font-family:var(--display);font-size:clamp(64px,9vw,140px);line-height:.85;text-align:right}
+.community .stw span{display:block;font-family:Inter,sans-serif;font-weight:700;font-size:16px;letter-spacing:.2em;text-transform:uppercase;margin-top:14px}
+.community svg.hexbg{position:absolute;right:-80px;top:-80px;width:340px;opacity:.18;pointer-events:none}
 
-/* ---------- location ---------- */
-.loc{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px;margin-top:56px}
+/* location */
+.loc{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;margin-top:48px}
 @media (max-width:900px){.loc{grid-template-columns:1fr}}
-.loc-info{border-radius:var(--radius);background:var(--white);border:1px solid var(--line);padding:36px;display:flex;flex-direction:column;gap:26px}
-.loc-info h3{font-size:28px;letter-spacing:-.02em;line-height:1.1}
-.loc-row{display:flex;gap:14px}
-.loc-row .ic{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent-ink);display:grid;place-items:center;flex:none}
-.loc-row small{display:block;color:var(--muted);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.loc-row b{font-size:17px}
-.map{border-radius:var(--radius);overflow:hidden;min-height:440px;border:1px solid var(--line);background:var(--paper-2)}
-.map iframe{width:100%;height:100%;min-height:440px;border:0;filter:grayscale(.9) contrast(1.05)}
+.loc-info{border-radius:var(--radius);background:var(--white);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.loc-info .photo{aspect-ratio:16/9;overflow:hidden}
+.loc-info .photo img{width:100%;height:100%;object-fit:cover}
+.loc-info .rows{padding:26px 28px 30px;display:flex;flex-direction:column;gap:18px}
+.loc-row{display:flex;gap:14px;align-items:flex-start}
+.loc-row .ic{width:42px;height:42px;border-radius:12px;background:var(--accent-soft);color:var(--accent-ink);display:grid;place-items:center;flex:none}
+.loc-row small{display:block;color:var(--muted);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.loc-row b{font-size:16px}
+.map{border-radius:var(--radius);overflow:hidden;min-height:460px;border:1px solid var(--line);background:var(--paper-2);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.85) contrast(1.05)}
 
-/* ---------- cta + form ---------- */
+/* final + form */
 .final{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
-@media (max-width:900px){.final{grid-template-columns:1fr;gap:40px}}
-.final h2{font-size:clamp(38px,5vw,72px)}
-form.lead{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:28px;padding:32px;display:grid;gap:14px}
-@media (max-width:600px){form.lead{padding:22px}}
+@media (max-width:900px){.final{grid-template-columns:1fr;gap:36px}}
+.final h2{font-size:clamp(36px,4.8vw,68px)}
+.promise{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.promise div{display:flex;gap:12px;align-items:center;color:#d8ddd8;font-weight:600}
+.promise svg{color:var(--accent);flex:none}
+form.lead>*,.field{min-width:0}
+.field input:not([type=radio]),.field textarea{width:100%}
+.seg{position:relative}
+form.lead{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:28px;padding:30px;display:grid;gap:14px}
+@media (max-width:600px){form.lead{padding:20px}}
 .seg{display:flex;flex-wrap:wrap;gap:8px}
 .seg input{position:absolute;opacity:0;pointer-events:none}
-.seg label{padding:10px 16px;border-radius:999px;border:1px solid var(--line-dark);font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
+.seg label{padding:10px 15px;border-radius:999px;border:1px solid var(--line-dark);font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
 .seg input:checked+label{background:var(--accent);border-color:var(--accent);color:var(--ink)}
 .seg input:focus-visible+label{outline:2px solid var(--accent);outline-offset:2px}
 .field{display:grid;gap:6px}
-.field label{font-size:13px;font-weight:700;color:var(--muted-dark)}
-.field input,.field textarea{font:inherit;color:#fff;background:var(--ink);border:1px solid var(--line-dark);border-radius:12px;padding:14px 16px;transition:border-color .2s}
+.field>label,.field>span{font-size:13px;font-weight:700;color:var(--muted-dark)}
+.field input,.field textarea{font:inherit;color:#fff;background:var(--ink);border:1px solid var(--line-dark);border-radius:12px;padding:13px 15px;transition:border-color .2s}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+.field input:user-invalid{border-color:#e57373}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media (max-width:600px){.row2{grid-template-columns:1fr}}
-form.lead .btn{justify-content:center;margin-top:6px}
+form.lead .btn{justify-content:center;margin-top:4px}
+form.lead .btn[disabled]{opacity:.6;pointer-events:none}
 .form-note{font-size:13px;color:var(--muted-dark);text-align:center}
-.form-ok{display:none;padding:16px;border-radius:12px;background:rgba(34,197,94,.12);color:#86efac;font-weight:700;text-align:center}
+.form-msg{display:none;padding:14px;border-radius:12px;font-weight:700;text-align:center}
+.form-msg.ok{display:block;background:rgba(109,205,124,.14);color:var(--accent-2)}
+.form-msg.err{display:block;background:rgba(229,115,115,.14);color:#f3b1b1}
+.hp{position:absolute;left:-9999px}
 
-/* ---------- footer ---------- */
-footer{background:var(--ink);color:#fff;padding:80px 0 40px;border-top:1px solid var(--line-dark)}
-.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+/* footer */
+footer{background:var(--ink);color:#fff;padding:72px 0 36px;border-top:1px solid var(--line-dark)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
 @media (max-width:900px){.foot{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.foot{grid-template-columns:1fr}}
-.foot h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-dark);margin-bottom:16px}
-.foot ul{list-style:none;display:grid;gap:10px}
-.foot a{color:#d4dae3;transition:color .2s}
-.foot a:hover{color:var(--accent-2)}
+.foot h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-dark);margin-bottom:14px}
+.foot ul{list-style:none;display:grid;gap:9px}
+.foot a{color:#d4dad4;transition:color .2s}
+.foot a:hover{color:var(--accent)}
 .foot p{color:var(--muted-dark);font-size:15px;margin-top:16px;max-width:320px}
-.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:64px;padding-top:28px;border-top:1px solid var(--line-dark);color:var(--muted-dark);font-size:13px}
-.giant{font-family:"Archivo Black",Inter,sans-serif;font-weight:400;font-size:clamp(80px,20vw,300px);font-weight:800;letter-spacing:-.07em;line-height:.8;margin-top:64px;background:linear-gradient(180deg,#1f2a20,transparent);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none;white-space:nowrap;overflow:hidden}
+.foot .logo{border-radius:14px;padding:10px 16px}
+.foot .logo img{height:36px}
+.giant{font-family:var(--display);font-size:clamp(70px,19vw,290px);line-height:.8;margin-top:56px;background:linear-gradient(180deg,#1f2a20,transparent);-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none;white-space:nowrap;overflow:hidden}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line-dark);color:var(--muted-dark);font-size:13px}
 
-/* sticky mobile CTA */
-.mcta{position:fixed;left:12px;right:12px;bottom:12px;z-index:80;display:none;gap:8px;transform:translateY(140%);transition:transform .5s var(--ease)}
+/* mobile bar */
+.mcta{position:fixed;left:12px;right:12px;bottom:12px;z-index:80;display:none;gap:8px;padding:6px;border-radius:18px;background:rgba(12,13,12,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line-dark);transform:translateY(160%);transition:transform .5s var(--ease)}
 .mcta.show{transform:none}
-.mcta a{flex:1;justify-content:center;padding:15px}
+.mcta a,.mcta button{flex:1;justify-content:center;padding:13px 8px;font-size:14px;border-radius:12px}
+.mcta .btn-line{color:#fff;border-color:rgba(255,255,255,.25)}
 @media (max-width:700px){.mcta{display:flex}}
+
+/* chat */
+.chat-fab{position:fixed;right:22px;bottom:22px;z-index:85;display:flex;align-items:center;gap:10px;padding:10px 18px 10px 10px;border-radius:999px;background:var(--ink);color:#fff;box-shadow:0 18px 40px -12px rgba(12,13,12,.55);font-weight:700;font-size:15px;transition:transform .3s var(--ease),opacity .3s}
+.chat-fab:hover{transform:translateY(-3px)}
+.chat-fab .hexi{width:38px;height:38px;display:grid;place-items:center;background:var(--accent);color:var(--ink);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.chat-fab.hidden{opacity:0;pointer-events:none;transform:translateY(20px)}
+@media (max-width:700px){.chat-fab{display:none}}
+.chat{position:fixed;right:22px;bottom:22px;z-index:96;width:min(400px,calc(100vw - 24px));height:min(620px,calc(100vh - 44px));height:min(620px,calc(100dvh - 44px));display:flex;flex-direction:column;background:var(--paper);border-radius:24px;overflow:hidden;box-shadow:0 40px 90px -20px rgba(12,13,12,.55);border:1px solid var(--line);transform-origin:bottom right;transform:scale(.9) translateY(20px);opacity:0;pointer-events:none;transition:transform .35s var(--ease),opacity .25s}
+.chat.open{transform:none;opacity:1;pointer-events:auto}
+@media (max-width:700px){.chat{right:0;bottom:0;width:100vw;height:100vh;height:100dvh;border-radius:0}}
+.chat-head{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(--ink);color:#fff}
+.chat-head .hexi{width:40px;height:40px;display:grid;place-items:center;background:var(--accent);color:var(--ink);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);flex:none}
+.chat-head b{display:block;font-size:16px}
+.chat-head small{color:var(--muted-dark);font-size:12px;display:flex;align-items:center;gap:6px}
+.chat-head .x{margin-left:auto;width:38px;height:38px;border-radius:50%;font-size:24px;display:grid;place-items:center}
+.chat-head .x:hover{background:rgba(255,255,255,.1)}
+.chat-log{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+.msg{max-width:86%;padding:11px 14px;border-radius:16px;font-size:15px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.msg.bot{background:var(--white);border:1px solid var(--line);border-bottom-left-radius:4px;align-self:flex-start}
+.msg.user{background:var(--ink);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.msg a{color:var(--accent-ink);font-weight:700;text-decoration:underline}
+.msg.typing{display:flex;gap:4px;align-items:center}
+.msg.typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:blink 1.2s infinite}
+.msg.typing i:nth-child(2){animation-delay:.2s}.msg.typing i:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+.chat-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 18px 10px}
+.chat-chips[hidden]{display:none}
+.chat-chips button{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--white);font-size:13px;font-weight:600;transition:all .2s}
+.chat-chips button:hover{border-color:var(--accent-ink);color:var(--accent-ink)}
+.chat-form{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line);background:var(--white)}
+.chat-form input{flex:1;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--paper);color:var(--ink);min-width:0}
+.chat-form input:focus{outline:none;border-color:var(--accent-ink)}
+.chat-form button{width:48px;border-radius:12px;background:var(--accent);color:var(--ink);display:grid;place-items:center;flex:none}
+.chat-form button[disabled]{opacity:.5}
+.chat-foot{font-size:11px;color:var(--muted);text-align:center;padding:0 12px 10px;background:var(--white)}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
@@ -362,39 +441,55 @@ footer{background:var(--ink);color:#fff;padding:80px 0 40px;border-top:1px solid
 </style>
 </head>
 <body>
-<div class="progress" id="progress"></div>
+<a class="skip" href="#main">Naar de inhoud</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-3-7z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-hex" viewBox="0 0 100 100"><path d="M50 3l41 23.5v47L50 97 9 73.5v-47z" fill="currentColor"/></symbol>
+</svg>
 
 <header class="site" id="header">
   <div class="nav">
-    <a href="#top" class="logo" aria-label="offiRent home"><img src="media/offirent-logo.png" alt="offiRent" width="132" height="39"></a>
+    <a href="#top" class="logo" aria-label="offiRent — naar boven"><img src="media/offirent-logo.png" alt="offiRent" width="132" height="39"></a>
     <ul class="nav-links">
       <li><a href="#aanbod">Aanbod</a></li>
+      <li><a href="#rondleiding">Rondleiding</a></li>
       <li><a href="#inbegrepen">Inbegrepen</a></li>
       <li><a href="#privacy">Privacy</a></li>
-      <li><a href="#team">Team</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="#team">Team</a></li>
       <li><a href="#locatie">Locatie</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="phone" href="tel:+3213261010"><span class="dot" aria-hidden="true"></span>013 26 10 10</a>
-      <a class="btn btn-accent" href="#start">Start vandaag <span class="arr">→</span></a>
+      <a class="phone" href="tel:+3213261010"><span class="dot" id="openDot" aria-hidden="true"></span><span>013 26 10 10</span></a>
+      <a class="btn btn-accent" href="#start">Start vandaag <svg class="ico-i arr"><use href="#i-arrow"/></svg></a>
       <button class="burger" id="burger" aria-label="Menu openen" aria-expanded="false" aria-controls="mmenu"><span></span></button>
     </div>
   </div>
 </header>
 
-<nav class="mobile-menu" id="mmenu" aria-label="Mobiel menu" hidden>
+<nav class="mobile-menu" id="mmenu" aria-label="Menu" hidden>
   <button class="close-menu" id="closeMenu" aria-label="Menu sluiten">×</button>
-  <a href="#aanbod">Aanbod</a>
-  <a href="#inbegrepen">Inbegrepen</a>
-  <a href="#privacy">Privacy</a>
-  <a href="#team">Team</a>
-  <a href="#faq">FAQ</a>
-  <a href="#locatie">Locatie</a>
-  <a class="btn btn-accent" href="#start">Start vandaag →</a>
+  <a class="big" href="#aanbod">Aanbod</a>
+  <a class="big" href="#rondleiding">Rondleiding</a>
+  <a class="big" href="#inbegrepen">Inbegrepen</a>
+  <a class="big" href="#faq">FAQ</a>
+  <a class="big" href="#team">Team</a>
+  <a class="big" href="#locatie">Locatie</a>
+  <a class="btn btn-accent" href="#start">Start vandaag <svg class="ico-i arr"><use href="#i-arrow"/></svg></a>
 </nav>
 
-<main id="top">
+<main id="main">
+<span id="top"></span>
 
 <!-- HERO -->
 <section class="hero" aria-label="Introductie">
@@ -407,179 +502,220 @@ footer{background:var(--ink);color:#fff;padding:80px 0 40px;border-top:1px solid
   <div class="hero-content">
     <span class="badge"><i>Erkend</i> Erkend dienstverlener · sinds 1997</span>
     <h1>
-      <span class="line"><span>Iedereen <span class="serif">zelfstandig.</span></span></span>
+      <span class="line"><span>Iedereen <span class="hl">zelfstandig.</span></span></span>
       <span class="line"><span>Wij doen de rest.</span></span>
     </h1>
-    <p class="lead">Virtueel kantoor, maatschappelijke zetel, flexplek of je eigen kantoor in Herk-de-Stad. Een sterk zakenadres, je thuisadres blijft privé, en een team dat je helpt groeien.</p>
+    <p class="lead">Een sterk zakenadres, je thuisadres privé en een team dat je helpt groeien. Virtueel kantoor, flexplek of je eigen kantoor in Herk-de-Stad.</p>
     <div class="hero-actions">
-      <a class="btn btn-accent" href="#kies">Vind jouw formule <span class="arr">→</span></a>
-      <a class="btn btn-glass" href="#locatie">Plan een rondleiding</a>
+      <a class="btn btn-accent" href="#kies">Vind jouw formule <svg class="ico-i arr"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-glass" href="#rondleiding">Bekijk het kantoor</a>
     </div>
-    <p class="hero-note">Post gratis doorgestuurd · Parking met laadpaal · Starters betalen per kwartaal</p>
+    <div class="hero-proof">
+      <span><svg class="ico-i"><use href="#i-check"/></svg>Virtueel kantoor vanaf €80/maand</span>
+      <span><svg class="ico-i"><use href="#i-check"/></svg>Antwoord binnen 48u</span>
+      <span><svg class="ico-i"><use href="#i-check"/></svg>Parking met laadpaal</span>
+    </div>
   </div>
   <button class="vid-toggle" id="vidToggle" aria-label="Video pauzeren"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
   <div class="hero-strip" aria-hidden="true">
     <small>Gebouwd voor</small>
     <div class="strip-viewport"><div class="strip-track">
-      <span>Starters</span><span>Zelfstandigen</span><span>Vennootschappen</span><span>Therapeuten</span><span>Consultants</span><span>KMO's</span><span>Internationale bedrijven</span>
-      <span>Starters</span><span>Zelfstandigen</span><span>Vennootschappen</span><span>Therapeuten</span><span>Consultants</span><span>KMO's</span><span>Internationale bedrijven</span>
+      <span>Starters</span><span>Zelfstandigen</span><span>Vennootschappen</span><span>Therapeuten</span><span>Consultants</span><span>KMO's</span><span>Nederlandse bedrijven</span>
+      <span>Starters</span><span>Zelfstandigen</span><span>Vennootschappen</span><span>Therapeuten</span><span>Consultants</span><span>KMO's</span><span>Nederlandse bedrijven</span>
     </div></div>
   </div>
 </section>
 
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Virtueel kantoor</span><span>Maatschappelijke zetel</span><span>Dagkantoor</span><span>Vast kantoor</span><span>Vergaderzaal</span><span>Therapieruimte</span><span>Makerspace</span><span>Laptopverhuur</span>
-    <span>Virtueel kantoor</span><span>Maatschappelijke zetel</span><span>Dagkantoor</span><span>Vast kantoor</span><span>Vergaderzaal</span><span>Therapieruimte</span><span>Makerspace</span><span>Laptopverhuur</span>
-  </div>
-</div>
-
-<!-- PATH FINDER -->
+<!-- FINDER -->
 <section class="sec" id="kies">
   <div class="wrap">
     <span class="eyebrow reveal">In 10 seconden</span>
-    <h2 class="reveal d1">Waar sta <span class="serif">jij</span> vandaag?</h2>
-    <p class="sub reveal d2">Kies wat het best bij je past. Wij tonen meteen de formule die werkt — geen verkooppraatje.</p>
-
+    <h2 class="reveal d1">Waar sta <span class="hl">jij</span> vandaag?</h2>
+    <p class="sub reveal d2">Kies je situatie. We tonen meteen de formule die werkt — zonder verkooppraatje.</p>
     <div class="finder">
-      <div class="choices reveal" role="tablist" aria-label="Jouw situatie">
+      <div class="choices reveal" role="tablist" aria-label="Jouw situatie" aria-orientation="vertical">
         <button class="choice" role="tab" aria-selected="true" aria-controls="p1" id="t1"><span class="n">01</span><span><b>Ik start mijn zaak</b><small>Eenmanszaak of vennootschap oprichten</small></span><span class="chev">→</span></button>
         <button class="choice" role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1"><span class="n">02</span><span><b>Ik werk van thuis</b><small>Maar wil mijn privéadres beschermen</small></span><span class="chev">→</span></button>
         <button class="choice" role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1"><span class="n">03</span><span><b>Ik heb een werkplek nodig</b><small>Een dag, een week of vast</small></span><span class="chev">→</span></button>
         <button class="choice" role="tab" aria-selected="false" aria-controls="p4" id="t4" tabindex="-1"><span class="n">04</span><span><b>Ik moet klanten ontvangen</b><small>Vergadering, therapie, training</small></span><span class="chev">→</span></button>
       </div>
-
       <div class="result reveal d2">
         <div class="panel active" role="tabpanel" id="p1" aria-labelledby="t1">
-          <span class="tag">Aanrader → Virtueel kantoor + zetel</span>
-          <h3>Start met een adres dat <span class="serif">vertrouwen</span> wekt.</h3>
-          <p>Registreer je maatschappelijke zetel bij offiRent. Wij helpen je ook verder dan het adres: gratis begeleiding van de zaakvoerder om je eerste klanten binnen te halen.</p>
-          <ul><li>Erkend als zetel bij de KBO</li><li>Betalen per kwartaal</li><li>Gratis sales-coaching</li><li>Verzekeringen via partner</li></ul>
-          <a class="btn btn-accent" href="#start">Plan een startgesprek <span class="arr">→</span></a>
+          <div class="ph"><img src="media/img/brievenbussen.webp" alt="Groene brievenbussen in de inkomhal van offiRent" loading="lazy"><span class="tag">Aanrader → Virtueel kantoor + zetel</span></div>
+          <div class="body">
+            <h3>Start met een adres dat <span class="hl">vertrouwen</span> wekt.</h3>
+            <p>Registreer je maatschappelijke zetel bij offiRent. We helpen je ook verder dan het adres: gratis begeleiding van de zaakvoerder om je eerste klanten binnen te halen.</p>
+            <ul><li>Officieel zakenadres</li><li>Starters betalen per kwartaal</li><li>Gratis sales-begeleiding</li><li>Verzekeringen via partner</li></ul>
+            <div class="acts"><a class="btn btn-accent" href="#start" data-dienst="Virtueel kantoor">Plan een startgesprek <svg class="ico-i arr"><use href="#i-arrow"/></svg></a><span class="price">vanaf €80/maand</span></div>
+          </div>
         </div>
         <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
-          <span class="tag">Aanrader → Virtueel kantoor</span>
-          <h3>Je thuisadres hoort <span class="serif">niet</span> op Google.</h3>
-          <p>Klanten, leveranciers en publieke registers zien ons zakenadres. Jij werkt verder van thuis — zonder ongewenst bezoek aan je voordeur.</p>
-          <ul><li>Professioneel zakenadres</li><li>Post gratis doorgestuurd</li><li>Onthaal voor bezoekers</li><li>4× per jaar vergaderruimte</li></ul>
-          <a class="btn btn-accent" href="#privacy">Hoe dat werkt <span class="arr">→</span></a>
+          <div class="ph"><img src="media/img/gebouw.webp" alt="Het offiRent-gebouw aan de Steenweg 3 in Herk-de-Stad" loading="lazy"><span class="tag">Aanrader → Virtueel kantoor</span></div>
+          <div class="body">
+            <h3>Je thuisadres hoort <span class="hl">niet</span> op Google.</h3>
+            <p>Klanten, leveranciers en openbare registers zien ons zakenadres. Jij werkt verder van thuis — zonder ongewenst bezoek aan je voordeur.</p>
+            <ul><li>Professioneel zakenadres</li><li>Post gratis doorgestuurd</li><li>Onthaal voor bezoekers</li><li>4× per jaar vergaderruimte</li></ul>
+            <div class="acts"><a class="btn btn-accent" href="#privacy">Zo werkt het <svg class="ico-i arr"><use href="#i-arrow"/></svg></a><span class="price">vanaf €80/maand</span></div>
+          </div>
         </div>
         <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
-          <span class="tag">Aanrader → Dagkantoor of vast kantoor</span>
-          <h3>Een bureau waar je <span class="serif">écht</span> werkt.</h3>
-          <p>Flexplek voor een dag of een eigen afsluitbaar kantoor — volledig ingericht. Groei je? Dan schuif je door zonder te verhuizen.</p>
-          <ul><li>Volledig ingericht</li><li>Ruime parking + laadpaal</li><li>Community Stwg3</li><li>Opschalen zonder verhuis</li></ul>
-          <a class="btn btn-accent" href="#start">Plan een rondleiding <span class="arr">→</span></a>
+          <div class="ph"><img src="media/img/dagkantoor.webp" alt="Lichte flexplek met witte bureaus en planten" loading="lazy"><span class="tag">Aanrader → Dagkantoor of vast kantoor</span></div>
+          <div class="body">
+            <h3>Een bureau waar je <span class="hl">écht</span> werkt.</h3>
+            <p>Flexplek voor een dag of een eigen afsluitbaar kantoor — volledig ingericht. Groei je? Dan schuif je door zonder te verhuizen.</p>
+            <ul><li>Volledig ingericht</li><li>Ruime parking + laadpaal</li><li>Community Stwg3</li><li>Opschalen zonder verhuis</li></ul>
+            <div class="acts"><a class="btn btn-accent" href="#start" data-dienst="Dagkantoor">Plan een rondleiding <svg class="ico-i arr"><use href="#i-arrow"/></svg></a></div>
+          </div>
         </div>
         <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
-          <span class="tag">Aanrader → Vergaderzaal of therapieruimte</span>
-          <h3>Ontvang klanten <span class="serif">zoals het hoort.</span></h3>
-          <p>Vergaderzaal voor 10 personen of een rustige therapieruimte, per uur te boeken. Laptops nodig voor een training? Die huur je er gewoon bij.</p>
-          <ul><li>Zaal voor 10 personen</li><li>Therapieruimte per uur</li><li>Laptopverhuur in volume</li><li>Onthaal inbegrepen</li></ul>
-          <a class="btn btn-accent" href="#start">Check beschikbaarheid <span class="arr">→</span></a>
+          <div class="ph"><img src="media/img/vergaderzaal.webp" alt="Vergaderzaal met gele stoelen en groot scherm" loading="lazy"><span class="tag">Aanrader → Vergaderzaal of therapieruimte</span></div>
+          <div class="body">
+            <h3>Ontvang klanten <span class="hl">zoals het hoort.</span></h3>
+            <p>Vergaderzaal voor 10 personen of een rustige therapieruimte, per uur te boeken. Laptops nodig voor een training? Die huur je er gewoon bij.</p>
+            <ul><li>Zaal voor 10 personen</li><li>Therapieruimte per uur</li><li>Laptopverhuur in volume</li><li>Onthaal inbegrepen</li></ul>
+            <div class="acts"><a class="btn btn-accent" href="#start" data-dienst="Vergaderzaal">Check beschikbaarheid <svg class="ico-i arr"><use href="#i-arrow"/></svg></a></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES BENTO -->
-<section class="sec" id="aanbod" style="padding-top:0">
+<!-- TOUR -->
+<section class="sec dark tour" id="rondleiding">
+  <div class="wrap sec-head">
+    <div>
+      <span class="eyebrow reveal">Rondleiding</span>
+      <h2 class="reveal d1">Kijk rond <span class="hl">voor je langskomt.</span></h2>
+      <p class="sub reveal d2">Geen stockfoto's: dit is ons kantoor aan de Steenweg 3. Sleep of scroll om rond te kijken.</p>
+    </div>
+    <div class="tour-ctrl reveal d2">
+      <button id="tourPrev" aria-label="Vorige foto"><svg class="ico-i" style="transform:rotate(180deg)"><use href="#i-arrow"/></svg></button>
+      <button id="tourNext" aria-label="Volgende foto"><svg class="ico-i"><use href="#i-arrow"/></svg></button>
+    </div>
+  </div>
+  <div class="tour-track reveal" id="tour" tabindex="0" aria-label="Foto's van het kantoor">
+    <figure class="shot wide"><img src="media/img/gebouw.webp" alt="Voorgevel van het offiRent-gebouw" loading="lazy"><figcaption><b>Steenweg 3</b>Herkenbaar zakenadres met ruime parking</figcaption></figure>
+    <figure class="shot"><img src="media/img/brievenbussen.webp" alt="Groene brievenbussen per onderneming" loading="lazy"><figcaption><b>Postbeheer</b>Elke onderneming haar eigen brievenbus</figcaption></figure>
+    <figure class="shot wide"><img src="media/img/vergaderzaal.webp" alt="Vergaderzaal met gele stoelen" loading="lazy"><figcaption><b>Vergaderzaal</b>Tot 10 personen, met groot scherm</figcaption></figure>
+    <figure class="shot"><img src="media/img/flex-werken.webp" alt="Ondernemer aan het werk op een flexplek" loading="lazy"><figcaption><b>Flexplek</b>Werk een dag, een week of vast</figcaption></figure>
+    <figure class="shot wide"><img src="media/img/therapieruimte.webp" alt="Therapieruimte met zetels en bosbehang" loading="lazy"><figcaption><b>Therapieruimte</b>Rustig en discreet, per uur</figcaption></figure>
+    <figure class="shot"><img src="media/img/vast-kantoor.webp" alt="Vast kantoor met bureau en kasten" loading="lazy"><figcaption><b>Vast kantoor</b>Volledig ingericht en afsluitbaar</figcaption></figure>
+    <figure class="shot wide"><img src="media/img/dagkantoor.webp" alt="Lichte werkruimte met bureaus" loading="lazy"><figcaption><b>Dagkantoor</b>Licht, stil en klaar om te werken</figcaption></figure>
+    <figure class="shot"><img src="media/img/vergaderzaal-detail.webp" alt="offiRent-koffiekop op de vergadertafel" loading="lazy"><figcaption><b>De details</b>Koffie staat klaar</figcaption></figure>
+  </div>
+  <div class="tour-progress" aria-hidden="true"><i id="tourBar"></i></div>
+</section>
+
+<!-- AANBOD -->
+<section class="sec" id="aanbod">
   <div class="wrap">
     <span class="eyebrow reveal">Aanbod</span>
-    <h2 class="reveal d1">Alles onder <span class="serif">één dak.</span></h2>
+    <h2 class="reveal d1">Alles onder <span class="hl">één dak.</span></h2>
     <p class="sub reveal d2">Van een adres op papier tot een volledig kantoor. Schuif op of af wanneer je zaak verandert.</p>
-
     <div class="bento">
-      <a href="#start" class="tile t-big reveal">
-        <svg class="visual" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#6dcd7c" stroke-width="1.2"><path d="M100 10l78 45v90l-78 45-78-45V55z" opacity=".25"/><path d="M100 35l56 32.5v65L100 165l-56-32.5v-65z" opacity=".5"/></g><path d="M100 62l33 19v38l-33 19-33-19V81z" fill="#6dcd7c"/></svg>
-        <div><span class="k">Bestseller</span><h3>Virtueel kantoor &amp; <span class="serif">maatschappelijke zetel</span></h3><p>Een betrouwbaar zakenadres, postbeheer, onthaal en vergaderruimte — zonder de kosten van een eigen pand.</p></div>
-        <div class="meta"><span class="price">Kwartaalbetaling mogelijk</span><span class="go">→</span></div>
+      <a href="#start" data-dienst="Virtueel kantoor" class="tile photo t-big reveal">
+        <img class="bg" src="media/img/brievenbussen-2.webp" alt="" loading="lazy">
+        <span class="k">Bestseller</span>
+        <div>
+          <h3>Virtueel kantoor &amp; <span class="hl" style="color:var(--accent)">maatschappelijke zetel</span></h3>
+          <p>Officieel zakenadres, postbeheer, onthaal en vergaderruimte — zonder de kosten van een eigen pand.</p>
+          <div class="meta"><span class="price-tag">vanaf <b>€80</b>/maand</span><span class="go"><svg class="ico-i"><use href="#i-arrow"/></svg></span></div>
+        </div>
       </a>
-      <a href="#start" class="tile t-2 reveal d1">
-        <div><span class="k">Flex</span><h3>Dagkantoor</h3><p>Een bureau wanneer jij het nodig hebt.</p></div>
-        <div class="meta"><span></span><span class="go">→</span></div>
+      <a href="#start" data-dienst="Dagkantoor" class="tile photo t-2 reveal d1">
+        <img class="bg" src="media/img/flex-koffie.webp" alt="" loading="lazy">
+        <span class="k">Flex</span>
+        <div><h3>Dagkantoor</h3><p>Een bureau wanneer jij het nodig hebt.</p><div class="meta"><span></span><span class="go"><svg class="ico-i"><use href="#i-arrow"/></svg></span></div></div>
       </a>
-      <a href="#start" class="tile t-2 t-accent reveal d2">
-        <div><span class="k">Privé</span><h3>Vast kantoor</h3><p>Je eigen afsluitbare ruimte, volledig ingericht.</p></div>
-        <div class="meta"><span></span><span class="go">→</span></div>
+      <a href="#start" data-dienst="Vast kantoor" class="tile photo t-2 reveal d2">
+        <img class="bg" src="media/img/vast-kantoor.webp" alt="" loading="lazy">
+        <span class="k">Privé</span>
+        <div><h3>Vast kantoor</h3><p>Je eigen afsluitbare ruimte, volledig ingericht.</p><div class="meta"><span></span><span class="go"><svg class="ico-i"><use href="#i-arrow"/></svg></span></div></div>
       </a>
-      <a href="#start" class="tile t-2 reveal">
-        <div><span class="k">Tot 10 pers.</span><h3>Vergaderzaal</h3><p>Voor overleg, presentaties en trainingen.</p></div>
-        <div class="meta"><span></span><span class="go">→</span></div>
+      <a href="#start" data-dienst="Vergaderzaal" class="tile photo t-2 reveal">
+        <img class="bg" src="media/img/vergaderzaal-tv.webp" alt="" loading="lazy">
+        <span class="k">Tot 10 pers.</span>
+        <div><h3>Vergaderzaal</h3><p>Overleg, presentaties en trainingen.</p><div class="meta"><span></span><span class="go"><svg class="ico-i"><use href="#i-arrow"/></svg></span></div></div>
       </a>
-      <a href="#start" class="tile t-2 t-soft reveal d1">
-        <div><span class="k">Per uur</span><h3>Therapieruimte</h3><p>Rustig, discreet, professioneel.</p></div>
-        <div class="meta"><span></span><span class="go">→</span></div>
+      <a href="#start" data-dienst="Therapieruimte" class="tile photo t-2 reveal d1">
+        <img class="bg" src="media/img/therapieruimte.webp" alt="" loading="lazy">
+        <span class="k">Per uur</span>
+        <div><h3>Therapieruimte</h3><p>Rustig, discreet, professioneel.</p><div class="meta"><span></span><span class="go"><svg class="ico-i"><use href="#i-arrow"/></svg></span></div></div>
       </a>
-      <a href="#start" class="tile t-2 reveal d2">
-        <div><span class="k">Maak het</span><h3>Makerspace</h3><p>MakerspaceLab: bouwen, testen, prototypen.</p></div>
-        <div class="meta"><span></span><span class="go">→</span></div>
+      <a href="#start" data-dienst="Makerspace" class="tile t-2 t-accent reveal d2">
+        <span class="k">Maak het</span>
+        <div><h3>Makerspace</h3><p>MakerspaceLab: bouwen, testen en prototypen, o.a. met 3D-printers.</p><div class="meta"><span></span><span class="go"><svg class="ico-i"><use href="#i-arrow"/></svg></span></div></div>
       </a>
-      <a href="#start" class="tile t-3 reveal">
-        <div><span class="k">Projecten &amp; beurzen</span><h3>Laptopverhuur — ook in grote aantallen</h3><p>Voor trainingen, events of tijdelijke teams. Klaar voor gebruik.</p></div>
-        <div class="meta"><span></span><span class="go">→</span></div>
+      <a href="#start" data-dienst="Laptopverhuur" class="tile photo t-3 reveal">
+        <img class="bg" src="media/img/laptops.webp" alt="" loading="lazy">
+        <span class="k">Projecten &amp; beurzen</span>
+        <div><h3>Laptopverhuur — ook in grote aantallen</h3><p>Voor trainingen, events of tijdelijke teams.</p><div class="meta"><span></span><span class="go"><svg class="ico-i"><use href="#i-arrow"/></svg></span></div></div>
       </a>
-      <a href="#start" class="tile t-3 reveal d1">
-        <div><span class="k">Internationaal</span><h3>Zakelijk adres in België</h3><p>Buitenlandse onderneming? Wij geven je een Belgische voet aan de grond.</p></div>
-        <div class="meta"><span></span><span class="go">→</span></div>
+      <a href="#start" data-dienst="Zakelijk adres België" class="tile t-3 reveal d1">
+        <span class="k">Internationaal</span>
+        <div><h3>Zakelijk adres in België</h3><p>Nederlands of buitenlands bedrijf? Wij geven je een Belgische voet aan de grond, met een echt adres waar klanten terecht kunnen.</p><div class="meta"><span></span><span class="go"><svg class="ico-i"><use href="#i-arrow"/></svg></span></div></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- INCLUDED (sticky) -->
+<!-- INBEGREPEN -->
 <section class="sec dark" id="inbegrepen">
   <div class="wrap included">
     <div class="inc-left">
       <span class="eyebrow">Standaard inbegrepen</span>
-      <h2>Geen kleine lettertjes. <span class="serif">Gewoon inbegrepen.</span></h2>
-      <p class="sub">Bij elk virtueel kantoor krijg je dit erbij — zonder meerprijs.</p>
-      <div class="inc-counter" aria-live="polite"><span id="incN">01</span><small>van 06 inbegrepen diensten</small></div>
+      <h2>Geen kleine lettertjes. <span class="hl">Gewoon inbegrepen.</span></h2>
+      <p class="sub">Bij elk virtueel kantoor vanaf €80/maand krijg je dit erbij.</p>
+      <div class="inc-visual"><img src="media/img/team-duim.webp" alt="Tevreden ondernemer aan het werk bij offiRent" loading="lazy"><span class="cnt" aria-live="polite"><span id="incN">01</span><small>/ 06</small></span></div>
     </div>
     <div class="inc-list">
       <div class="inc" data-i="1"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span><div><h3>Professioneel onthaal</h3><p>Bezoekers worden ontvangen door een mens, niet door een deurbel.</p></div></div>
-      <div class="inc" data-i="2"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><h3>Postbeheer + gratis doorsturen</h3><p>Je post wordt veilig bewaard en gratis naar je doorgestuurd. Niets gaat verloren.</p></div></div>
+      <div class="inc" data-i="2"><span class="ic"><svg width="24" height="24"><use href="#i-mail"/></svg></span><div><h3>Postbeheer + gratis doorsturen</h3><p>Je post komt veilig toe in je eigen brievenbus en wordt gratis naar je doorgestuurd.</p></div></div>
       <div class="inc" data-i="3"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span><div><h3>Vergaderruimte, 4× per jaar</h3><p>Ontvang klanten of je boekhouder in een professionele zaal.</p></div></div>
-      <div class="inc" data-i="4"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><h3>Ruime parking met laadpaal</h3><p>Geen parkeerstress, en je elektrische wagen laadt terwijl je vergadert.</p></div></div>
-      <div class="inc" data-i="5"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.2 1.3-4 3-4s4 1.8 4 4"/></svg></span><div><h3>Community Stwg3</h3><p>Toegang tot een netwerk van ondernemers aan de Steenweg 3. Leren, delen, samenwerken.</p></div></div>
+      <div class="inc" data-i="4"><span class="ic"><svg width="24" height="24"><use href="#i-bolt"/></svg></span><div><h3>Ruime parking met laadpaal</h3><p>Geen parkeerstress, en je elektrische wagen laadt terwijl je vergadert.</p></div></div>
+      <div class="inc" data-i="5"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.2 1.3-4 3-4s4 1.8 4 4"/></svg></span><div><h3>Community Stwg3</h3><p>Een netwerk van ondernemers aan de Steenweg 3. Leren, delen, samenwerken.</p></div></div>
       <div class="inc" data-i="6"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><div><h3>Gratis begeleiding van de zaakvoerder</h3><p>We helpen je je sales te verhogen. Jouw groei is onze groei.</p></div></div>
     </div>
   </div>
 </section>
 
+<!-- WERKWIJZE -->
+<section class="sec" id="werkwijze">
+  <div class="wrap">
+    <span class="eyebrow reveal">Zo werkt het</span>
+    <h2 class="reveal d1">Van aanvraag tot adres in <span class="hl">3 stappen.</span></h2>
+    <div class="steps">
+      <div class="step reveal"><h3>Je laat iets weten</h3><p>Via het formulier, de chat of telefoon. Vertel kort wat je zaak doet en wat je nodig hebt.</p><span class="when">Binnen 48u antwoord op werkdagen</span></div>
+      <div class="step reveal d1"><h3>We stemmen af</h3><p>We kiezen samen de juiste formule en maken duidelijke afspraken over het adres en je post. Langskomen mag altijd.</p><span class="when">Persoonlijk, geen callcenter</span></div>
+      <div class="step reveal d2"><h3>Je bent vertrokken</h3><p>Je adres is actief en je post komt binnen bij ons. Jij focust op je klanten — wij doen de rest.</p><span class="when">Starters betalen per kwartaal</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- PRIVACY -->
-<section class="sec" id="privacy">
+<section class="sec tight" id="privacy">
   <div class="wrap split">
     <div>
       <span class="eyebrow reveal">Privacy</span>
-      <h2 class="reveal d1">Je zaak is publiek. <span class="serif">Jouw huis niet.</span></h2>
-      <p class="sub reveal d2">Wie je maatschappelijke zetel thuis registreert, zet zijn adres in openbare registers — voor iedereen zichtbaar. Sleep de slider en zie het verschil.</p>
+      <h2 class="reveal d1">Je zaak is publiek. <span class="hl">Jouw huis niet.</span></h2>
+      <p class="sub reveal d2">Wie zijn maatschappelijke zetel thuis registreert, zet zijn adres in openbare registers — voor iedereen zichtbaar. Sleep de slider en zie het verschil.</p>
       <ul class="checks reveal d3">
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg>Zakenadres los van je woning</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg>Onverwachte bezoekers worden door ons onthaal opgevangen</li>
-        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5L20 7"/></svg>Een adres in een herkenbare zakelijke omgeving</li>
+        <li><svg width="22" height="22"><use href="#i-check"/></svg>Zakenadres los van je woning</li>
+        <li><svg width="22" height="22"><use href="#i-check"/></svg>Onverwachte bezoekers worden door ons onthaal opgevangen</li>
+        <li><svg width="22" height="22"><use href="#i-check"/></svg>Een echt adres, geen anonieme postbus</li>
       </ul>
-      <a class="btn btn-dark reveal d4" href="#start">Bescherm mijn adres <span class="arr">→</span></a>
+      <a class="btn btn-dark reveal d4" href="#start" data-dienst="Virtueel kantoor">Bescherm mijn adres <svg class="ico-i arr"><use href="#i-arrow"/></svg></a>
     </div>
-
     <div class="compare reveal d2" id="compare">
       <div class="side before">
         <span class="lbl">Zetel thuis</span>
-        <div class="kbo">
-          <div class="row"><span>Onderneming</span><b>Jouw BV</b></div>
-          <div class="row"><span>Zetel</span><b class="warn">Jouw woonstraat 12</b></div>
-          <div class="row"><span>Zichtbaar voor</span><b class="warn">Iedereen</b></div>
-        </div>
+        <div class="kbo"><div class="row"><span>Onderneming</span><b>Jouw BV</b></div><div class="row"><span>Zetel</span><b class="warn">Jouw woonstraat 12</b></div><div class="row"><span>Zichtbaar voor</span><b class="warn">Iedereen</b></div></div>
         <span class="big">Klanten aan je voordeur.</span>
       </div>
       <div class="side after" id="after">
         <span class="lbl">Zetel bij offiRent</span>
-        <div class="kbo">
-          <div class="row"><span>Onderneming</span><b>Jouw BV</b></div>
-          <div class="row"><span>Zetel</span><b class="ok">Steenweg 3, Herk-de-Stad</b></div>
-          <div class="row"><span>Je woning</span><b class="ok">Privé</b></div>
-        </div>
+        <div class="kbo"><div class="row"><span>Onderneming</span><b>Jouw BV</b></div><div class="row"><span>Zetel</span><b class="ok">Steenweg 3, Herk-de-Stad</b></div><div class="row"><span>Je woning</span><b class="ok">Privé</b></div></div>
         <span class="big">Rust thuis. Sterk op papier.</span>
       </div>
       <div class="handle" id="handle"><button aria-label="Vergelijking verschuiven" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></button></div>
@@ -588,196 +724,269 @@ footer{background:var(--ink);color:#fff;padding:80px 0 40px;border-top:1px solid
 </section>
 
 <!-- NUMBERS -->
-<section class="dark" style="padding:40px 0">
+<section class="dark" style="padding:36px 0">
   <div class="wrap">
     <div class="nums">
-      <div class="num"><b data-count="1997">1997</b><span>Actief sinds — al meer dan 25 jaar</span></div>
-      <div class="num"><b data-count="10">10</b><span>Personen in onze vergaderzaal</span></div>
-      <div class="num"><b><span data-count="4">4</span><sup>×</sup></b><span>Per jaar vergaderen, inbegrepen</span></div>
-      <div class="num"><b><span data-count="0">0</span><sup>€</sup></b><span>Voor het doorsturen van je post</span></div>
+      <div class="num"><b><span data-count="1997">1997</span></b><span>Actief sinds — meer dan 25 jaar ervaring</span></div>
+      <div class="num"><b><sup>€</sup><span data-count="80">80</span></b><span>Per maand, virtueel kantoor vanaf</span></div>
+      <div class="num"><b><span data-count="48">48</span><sup>u</sup></b><span>Maximale reactietijd op werkdagen</span></div>
+      <div class="num"><b><span data-count="10">10</span></b><span>Personen in onze vergaderzaal</span></div>
     </div>
   </div>
 </section>
 
-<!-- OBJECTIONS / FAQ -->
+<!-- FAQ -->
 <section class="sec" id="faq">
   <div class="wrap">
     <span class="eyebrow reveal">Eerlijk antwoord</span>
-    <h2 class="reveal d1">Twijfels? <span class="serif">Terecht.</span></h2>
-    <p class="sub reveal d2">De drie vragen die we het vaakst horen — en ons eerlijke antwoord.</p>
+    <h2 class="reveal d1">Twijfels? <span class="hl">Terecht.</span></h2>
+    <p class="sub reveal d2">De vragen die we het vaakst horen — en ons eerlijke antwoord.</p>
     <div class="objs">
-      <div class="obj reveal"><p class="q">Is dat wel legaal?</p><p>Ja. offiRent is een <b>erkend dienstverlener</b> voor domiciliëring. Je maatschappelijke zetel bij ons registreren is volledig in orde, voor eenmanszaken én vennootschappen.</p></div>
-      <div class="obj reveal d1"><p class="q">Ik ben net gestart, is dat niet te duur?</p><p>Daarom kan je als starter <b>per kwartaal betalen</b>. En je krijgt gratis begeleiding van onze zaakvoerder om sneller omzet te draaien. Dat verdient zichzelf terug.</p></div>
-      <div class="obj reveal d2"><p class="q">Ik krijg bijna geen post.</p><p>Dan is het nog eenvoudiger. Je betaalt voor <b>een sterk adres en je privacy</b> — de post die wél komt, sturen we gratis door. Niets wordt genegeerd.</p></div>
+      <div class="obj reveal"><p class="q">Is dat wel legaal?</p><p>Ja. offiRent is een <b>erkend dienstverlener</b>. Je maatschappelijke zetel bij ons registreren is volledig in orde, voor eenmanszaken én vennootschappen.</p></div>
+      <div class="obj reveal d1"><p class="q">Ik ben net gestart. Te duur?</p><p>Vanaf <b>€80 per maand</b>, en als starter betaal je <b>per kwartaal</b>. Je krijgt er gratis begeleiding van de zaakvoerder bij om sneller omzet te draaien.</p></div>
+      <div class="obj reveal d2"><p class="q">Ik krijg bijna geen post.</p><p>Dan is het nog eenvoudiger. Je betaalt voor <b>een sterk adres en je privacy</b> — de post die wél komt, sturen we gratis door.</p></div>
+    </div>
+    <div class="acc reveal">
+      <details><summary>Wat is een maatschappelijke zetel precies?<i aria-hidden="true">+</i></summary><div class="a">Het officiële adres van je onderneming. Het wordt gebruikt voor administratieve, juridische en zakelijke communicatie en staat in openbare registers.</div></details>
+      <details><summary>Kan ik mijn privéadres echt vermijden?<i aria-hidden="true">+</i></summary><div class="a">Ja. Veel ondernemers kiezen een professioneel adres zodat hun woonadres niet publiek gebruikt wordt. Bij offiRent is dat een echt adres in Limburg, geen anonieme postbus.</div></details>
+      <details><summary>Wat gebeurt er met mijn post?<i aria-hidden="true">+</i></summary><div class="a">We ontvangen je zakelijke post en sturen ze gratis door. De precieze afspraken (hoe vaak, naar waar) maken we samen bij je aanvraag.</div></details>
+      <details><summary>Wat kost een maatschappelijke zetel?<i aria-hidden="true">+</i></summary><div class="a">De formule start vanaf €80 per maand. Welke formule bij jou past, bespreken we graag — <a href="#start" data-dienst="Virtueel kantoor">vraag een voorstel aan</a>.</div></details>
+      <details><summary>Kan ik mijn bestaande zetel naar offiRent verplaatsen?<i aria-hidden="true">+</i></summary><div class="a">Ja, ook bestaande ondernemingen kunnen hun zetel naar offiRent verhuizen. We overlopen samen wat er nodig is; je boekhouder kan de formaliteiten bevestigen.</div></details>
+      <details><summary>Ik heb een Nederlands bedrijf. Kan ik bij jullie een Belgisch adres krijgen?<i aria-hidden="true">+</i></summary><div class="a">Ja. Met een virtueel kantoor in Herk-de-Stad krijg je een echt fysiek adres in België waar klanten en leveranciers terecht kunnen. Over de voorwaarden om in België te ondernemen informeren we je graag.</div></details>
     </div>
   </div>
 </section>
 
 <!-- TEAM -->
-<section class="sec" id="team" style="padding-top:0">
+<section class="sec tight" id="team">
   <div class="wrap">
     <span class="eyebrow reveal">Team offiRent</span>
-    <h2 class="reveal d1">Mensen, <span class="serif">geen callcenter.</span></h2>
+    <h2 class="reveal d1">Mensen, <span class="hl">geen callcenter.</span></h2>
     <p class="sub reveal d2">Je belt, je krijgt iemand die je kent. Zo simpel is het.</p>
     <div class="team">
-      <div class="member reveal"><div class="ph">DR</div><div class="info"><b>Davy Renckens</b><small>Zaakvoerder</small></div></div>
-      <div class="member reveal d1"><div class="ph">AS</div><div class="info"><b>Anja Siodlazeck</b><small>Financieel manager</small></div></div>
-      <div class="member reveal d2"><div class="ph">KT</div><div class="info"><b>Karsten Thomis</b><small>Manusje-van-alles</small></div></div>
-      <div class="member reveal d3"><div class="ph">AV</div><div class="info"><b>An Vaes</b><small>Commercieel medewerker</small></div></div>
-      <div class="member reveal d4"><div class="ph">MI</div><div class="info"><b>Michel Ilsbroukx</b><small>Verzekeringen · partner</small></div></div>
+      <div class="member reveal"><div class="pic"><svg class="hex" viewBox="0 0 100 100"><use href="#i-hex" style="color:#c7f0b0"/></svg><span>DR</span></div><div class="info"><b>Davy Renckens</b><small>Zaakvoerder</small></div></div>
+      <div class="member reveal d1"><div class="pic"><svg class="hex" viewBox="0 0 100 100"><use href="#i-hex" style="color:#1f231f"/></svg><span>AS</span></div><div class="info"><b>Anja Siodlazeck</b><small>Financieel manager</small></div></div>
+      <div class="member reveal d2"><div class="pic"><img src="media/img/karsten-thomis.webp" alt="Karsten Thomis" loading="lazy"></div><div class="info"><b>Karsten Thomis</b><small>Manusje-van-alles</small></div></div>
+      <div class="member reveal d3"><div class="pic"><img src="media/img/an-vaes.webp" alt="An Vaes" loading="lazy"></div><div class="info"><b>An Vaes</b><small>Commercieel medewerker</small></div></div>
+      <div class="member reveal d4"><div class="pic"><svg class="hex" viewBox="0 0 100 100"><use href="#i-hex" style="color:#c7f0b0"/></svg><span>MI</span></div><div class="info"><b>Michel Ilsbroukx</b><small>Verzekeringen · partner</small></div></div>
     </div>
     <div class="contact-card reveal">
-      <div class="av">AV</div>
-      <div><b style="font-size:20px">Je vaste aanspreekpunt: An Vaes</b><p>Vragen over een virtueel kantoor of een rondleiding? An helpt je persoonlijk verder.</p></div>
+      <img src="media/img/an-vaes.webp" alt="An Vaes" loading="lazy">
+      <div><b>Je aanspreekpunt: An Vaes</b><p>Vragen over een virtueel kantoor of een rondleiding? An helpt je persoonlijk verder.</p></div>
       <div class="acts">
-        <a class="chip" href="tel:+3213261010">📞 Bellen</a>
-        <a class="chip" href="mailto:info@offirent.be">✉ Mailen</a>
-        <a class="chip" href="https://wa.me/3213261010">💬 WhatsApp</a>
+        <a class="chip" href="tel:+3213261010"><svg class="ico-i"><use href="#i-phone"/></svg>Bellen</a>
+        <a class="chip" href="mailto:info@offirent.be"><svg class="ico-i"><use href="#i-mail"/></svg>Mailen</a>
+        <button class="chip" type="button" data-open-chat><svg class="ico-i"><use href="#i-chat"/></svg>Chatten</button>
       </div>
     </div>
   </div>
 </section>
 
 <!-- COMMUNITY -->
-<section class="sec" style="padding-top:0">
+<section class="sec tight">
   <div class="wrap">
     <div class="community reveal">
+      <svg class="hexbg" viewBox="0 0 100 100" aria-hidden="true"><use href="#i-hex" style="color:#fff"/></svg>
       <div>
-        <span class="eyebrow" style="color:var(--ink)">Community</span>
-        <h2>Ondernemen is eenzaam. <span class="serif">Hier niet.</span></h2>
+        <span class="eyebrow">Community</span>
+        <h2>Ondernemen is eenzaam. <span class="w">Hier niet.</span></h2>
         <p>Stwg3 is onze community van zelfstandigen en zaakvoerders aan de Steenweg 3. Netwerken, ideeën delen, samen groeien.</p>
-        <a class="btn btn-white" href="#start" style="margin-top:28px">Schrijf je in op Stwg3 <span class="arr">→</span></a>
+        <a class="btn btn-dark" href="#start" data-dienst="Andere" data-msg="Ik wil me inschrijven op de Stwg3-community." style="margin-top:26px">Schrijf je in op Stwg3 <svg class="ico-i arr"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="stw" aria-hidden="true">Stwg3<span>Steenweg 3</span></div>
     </div>
   </div>
 </section>
 
-<!-- LOCATION -->
-<section class="sec" id="locatie" style="padding-top:0">
+<!-- LOCATIE -->
+<section class="sec tight" id="locatie">
   <div class="wrap">
     <span class="eyebrow reveal">Kom langs</span>
-    <h2 class="reveal d1">In het hart van <span class="serif">Limburg.</span></h2>
+    <h2 class="reveal d1">In het hart van <span class="hl">Limburg.</span></h2>
     <div class="loc">
       <div class="loc-info reveal">
-        <h3>offiRent hoofdkantoor<br>Herk-de-Stad</h3>
-        <div class="loc-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Adres</small><b>Steenweg 3<br>3540 Herk-de-Stad</b></div></div>
-        <div class="loc-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>Bereikbaar</small><b>Ma – vr · 09:00 – 17:00</b></div></div>
-        <div class="loc-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></span><div><small>Telefoon</small><b><a href="tel:+3213261010">013 26 10 10</a></b></div></div>
-        <div class="loc-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></span><div><small>Parking</small><b>Ruim, gratis, met laadpaal</b></div></div>
-        <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=50.9478051,5.2171074" target="_blank" rel="noopener">Route plannen <span class="arr">→</span></a>
+        <div class="photo"><img src="media/img/gebouw.webp" alt="Het offiRent-gebouw met parking" loading="lazy"></div>
+        <div class="rows">
+          <div class="loc-row"><span class="ic"><svg class="ico-i"><use href="#i-pin"/></svg></span><div><small>Adres</small><b>Steenweg 3, 3540 Herk-de-Stad</b></div></div>
+          <div class="loc-row"><span class="ic"><svg class="ico-i"><use href="#i-clock"/></svg></span><div><small>Bereikbaar</small><b>Ma – vr · 09:00 – 17:00</b> <span id="openNow" style="font-size:13px;font-weight:700"></span></div></div>
+          <div class="loc-row"><span class="ic"><svg class="ico-i"><use href="#i-phone"/></svg></span><div><small>Telefoon</small><b><a href="tel:+3213261010">013 26 10 10</a></b></div></div>
+          <div class="loc-row"><span class="ic"><svg class="ico-i"><use href="#i-bolt"/></svg></span><div><small>Parking</small><b>Ruim, met elektrische laadpaal</b></div></div>
+          <a class="btn btn-dark" style="align-self:flex-start" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.9478051,5.2171074" target="_blank" rel="noopener">Route plannen <svg class="ico-i arr"><use href="#i-arrow"/></svg></a>
+        </div>
       </div>
-      <div class="map reveal d1">
-        <iframe title="Kaart offiRent Herk-de-Stad" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=5.2071%2C50.9428%2C5.2271%2C50.9528&amp;layer=mapnik&amp;marker=50.9478051%2C5.2171074"></iframe>
-      </div>
+      <div class="map reveal d1"><iframe title="Kaart: offiRent, Steenweg 3, Herk-de-Stad" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=5.2071%2C50.9428%2C5.2271%2C50.9528&amp;layer=mapnik&amp;marker=50.9478051%2C5.2171074"></iframe></div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- START / FORM -->
 <section class="sec dark" id="start">
   <div class="wrap final">
     <div>
       <span class="eyebrow">Start vandaag</span>
-      <h2>Klaar om <span class="serif">zelfstandig</span> te groeien?</h2>
-      <p class="sub">Laat je gegevens achter. We bellen je binnen één werkdag terug met een eerlijk voorstel — of plan meteen een rondleiding.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px">
-        <a class="btn btn-accent" href="tel:+3213261010">Bel 013 26 10 10</a>
-        <a class="btn btn-ghost" href="mailto:info@offirent.be">info@offirent.be</a>
+      <h2>Klaar om <span class="hl">zelfstandig</span> te groeien?</h2>
+      <p class="sub">Laat je gegevens achter. Je krijgt een eerlijk voorstel — of plan meteen een rondleiding.</p>
+      <div class="promise">
+        <div><svg class="ico-i"><use href="#i-check"/></svg>Antwoord binnen 48 uur op werkdagen</div>
+        <div><svg class="ico-i"><use href="#i-check"/></svg>Persoonlijk contact, geen callcenter</div>
+        <div><svg class="ico-i"><use href="#i-check"/></svg>Virtueel kantoor vanaf €80/maand</div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px">
+        <a class="btn btn-accent" href="tel:+3213261010"><svg class="ico-i"><use href="#i-phone"/></svg>013 26 10 10</a>
+        <a class="btn btn-glass" href="mailto:info@offirent.be"><svg class="ico-i"><use href="#i-mail"/></svg>info@offirent.be</a>
       </div>
     </div>
-    <form class="lead" id="leadForm" novalidate>
-      <div class="field"><label>Waar heb je interesse in?</label>
-        <div class="seg">
+    <form class="lead" id="leadForm" name="aanvraag" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="aanvraag">
+      <p class="hp"><label>Niet invullen <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field"><span id="dienstLbl">Waar heb je interesse in?</span>
+        <div class="seg" role="radiogroup" aria-labelledby="dienstLbl">
           <input type="radio" name="dienst" id="s1" value="Virtueel kantoor" checked><label for="s1">Virtueel kantoor</label>
           <input type="radio" name="dienst" id="s2" value="Dagkantoor"><label for="s2">Dagkantoor</label>
           <input type="radio" name="dienst" id="s3" value="Vast kantoor"><label for="s3">Vast kantoor</label>
           <input type="radio" name="dienst" id="s4" value="Vergaderzaal"><label for="s4">Vergaderzaal</label>
-          <input type="radio" name="dienst" id="s5" value="Andere"><label for="s5">Andere</label>
+          <input type="radio" name="dienst" id="s5" value="Therapieruimte"><label for="s5">Therapieruimte</label>
+          <input type="radio" name="dienst" id="s6" value="Makerspace"><label for="s6">Makerspace</label>
+          <input type="radio" name="dienst" id="s7" value="Laptopverhuur"><label for="s7">Laptopverhuur</label>
+          <input type="radio" name="dienst" id="s8" value="Zakelijk adres België"><label for="s8">Adres België</label>
+          <input type="radio" name="dienst" id="s9" value="Andere"><label for="s9">Andere</label>
         </div>
       </div>
       <div class="row2">
         <div class="field"><label for="naam">Naam</label><input id="naam" name="naam" autocomplete="name" required></div>
-        <div class="field"><label for="tel">Telefoon</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="tel">Telefoon</label><input id="tel" name="telefoon" type="tel" autocomplete="tel" required></div>
       </div>
-      <div class="field"><label for="mail">E-mail</label><input id="mail" name="mail" type="email" autocomplete="email" required></div>
-      <div class="field"><label for="msg">Bericht (optioneel)</label><textarea id="msg" name="msg" rows="3"></textarea></div>
-      <button class="btn btn-accent" type="submit">Verstuur aanvraag <span class="arr">→</span></button>
-      <p class="form-ok" id="formOk" role="status">Bedankt! We nemen binnen één werkdag contact op.</p>
-      <p class="form-note">Geen spam. We gebruiken je gegevens enkel om je terug te contacteren.</p>
+      <div class="field"><label for="mail">E-mail</label><input id="mail" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="msg">Bericht (optioneel)</label><textarea id="msg" name="bericht" rows="3" placeholder="Bv. ik start in juni een eenmanszaak als consultant."></textarea></div>
+      <button class="btn btn-accent" type="submit" id="leadBtn">Verstuur aanvraag <svg class="ico-i arr"><use href="#i-arrow"/></svg></button>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+      <p class="form-note">We gebruiken je gegevens enkel om je te contacteren. Geen spam.</p>
     </form>
   </div>
 </section>
-
 </main>
 
 <footer>
   <div class="wrap">
     <div class="foot">
       <div>
-        <a href="#top" class="logo footer-logo"><img src="media/offirent-logo.png" alt="offiRent" width="150" height="44"></a>
+        <a href="#top" class="logo"><img src="media/offirent-logo.png" alt="offiRent" width="150" height="44"></a>
         <p>Virtuele kantoren, flexibele werkruimtes en zakelijke voorzieningen in Limburg. Iedereen zelfstandig.</p>
       </div>
       <div><h4>Diensten</h4><ul><li><a href="#aanbod">Virtueel kantoor</a></li><li><a href="#aanbod">Dagkantoor</a></li><li><a href="#aanbod">Vast kantoor</a></li><li><a href="#aanbod">Vergaderzaal huren</a></li><li><a href="#aanbod">Therapieruimte</a></li><li><a href="#aanbod">Makerspace</a></li></ul></div>
-      <div><h4>offiRent</h4><ul><li><a href="#team">Team</a></li><li><a href="#faq">FAQ</a></li><li><a href="#start">Werken bij offiRent</a></li><li><a href="#start">Partner worden</a></li><li><a href="#start">Publicaties</a></li></ul></div>
+      <div><h4>offiRent</h4><ul><li><a href="#team">Team</a></li><li><a href="#faq">FAQ</a></li><li><a href="https://www.offirent.be/vacatures/onthaalbediende">Werken bij offiRent</a></li><li><a href="https://www.offirent.be/publicaties">Publicaties</a></li><li><a href="https://www.offirent.be/stwg3">Stwg3</a></li></ul></div>
       <div><h4>Contact</h4><ul><li>Steenweg 3</li><li>3540 Herk-de-Stad</li><li><a href="tel:+3213261010">013 26 10 10</a></li><li><a href="mailto:info@offirent.be">info@offirent.be</a></li></ul></div>
     </div>
     <div class="giant" aria-hidden="true">offiRent</div>
-    <div class="legal"><span>© 1997–2026 offiRent BV · BE 0866.726.672</span><span><a href="#">Privacyverklaring</a> · <a href="#">Servicevoorwaarden</a></span></div>
+    <div class="legal"><span>© 1997–2026 offiRent BV · BE 0866.726.672</span><span><a href="https://www.offirent.be/privacy">Privacyverklaring</a> · <a href="https://www.offirent.be/servicevoorwaarden">Servicevoorwaarden</a></span></div>
   </div>
 </footer>
 
 <div class="mcta" id="mcta">
-  <a class="btn btn-dark" href="tel:+3213261010">Bellen</a>
-  <a class="btn btn-accent" href="#start">Start vandaag</a>
+  <a class="btn btn-line" href="tel:+3213261010"><svg class="ico-i"><use href="#i-phone"/></svg>Bel</a>
+  <button class="btn btn-line" type="button" data-open-chat><svg class="ico-i"><use href="#i-chat"/></svg>Chat</button>
+  <a class="btn btn-accent" href="#start">Start</a>
 </div>
+
+<!-- CHAT -->
+<button class="chat-fab" id="chatFab" type="button" data-open-chat aria-controls="chat" aria-expanded="false"><span class="hexi"><svg class="ico-i" width="18" height="18"><use href="#i-chat"/></svg></span>Stel je vraag</button>
+<section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chatTitle" aria-hidden="true">
+  <div class="chat-head">
+    <span class="hexi"><svg width="18" height="18"><use href="#i-chat"/></svg></span>
+    <div><b id="chatTitle">offiRent assistent</b><small><span class="dot" aria-hidden="true"></span>Antwoordt meteen · AI</small></div>
+    <button class="x" id="chatClose" type="button" aria-label="Chat sluiten">×</button>
+  </div>
+  <div class="chat-log" id="chatLog" aria-live="polite"></div>
+  <div class="chat-chips" id="chatChips">
+    <button type="button">Wat kost een virtueel kantoor?</button>
+    <button type="button">Is een zetel bij jullie legaal?</button>
+    <button type="button">Kan ik de vergaderzaal huren?</button>
+    <button type="button">Waar zijn jullie gevestigd?</button>
+  </div>
+  <form class="chat-form" id="chatForm">
+    <label for="chatInput" class="hp">Je vraag</label>
+    <input id="chatInput" autocomplete="off" maxlength="800" placeholder="Typ je vraag…">
+    <button type="submit" aria-label="Verstuur"><svg width="20" height="20"><use href="#i-send"/></svg></button>
+  </form>
+  <p class="chat-foot">AI-assistent — antwoorden kunnen fouten bevatten. Zekerheid nodig? Bel 013 26 10 10.</p>
+</section>
 
 <script>
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const store = {
+    get(k) { try { return JSON.parse(sessionStorage.getItem(k)); } catch { return null; } },
+    set(k, v) { try { sessionStorage.setItem(k, JSON.stringify(v)); } catch {} }
+  };
 
-  /* header + progress + mobile CTA */
-  const header = document.getElementById('header'), prog = document.getElementById('progress'), mcta = document.getElementById('mcta');
+  /* header: scrolled state, hide on scroll down, progress, mobile bar */
+  const header = $('#header'), prog = $('#progress'), mcta = $('#mcta'), links = $$('.nav-links a');
+  let lastY = 0;
   const onScroll = () => {
     const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
-    header.classList.toggle('scrolled', y > innerHeight * 0.75);
+    header.classList.toggle('scrolled', y > innerHeight * .7);
+    if (y < innerHeight * .5) links.forEach(a => a.classList.remove('active'));
+    header.classList.toggle('hide', y > innerHeight && y > lastY + 4 && !document.body.classList.contains('menu-open'));
+    if (y < lastY - 4) header.classList.remove('hide');
+    lastY = y;
     prog.style.width = (h > 0 ? y / h * 100 : 0) + '%';
-    mcta.classList.toggle('show', y > innerHeight * 0.6 && y < h - 400);
+    mcta.classList.toggle('show', y > innerHeight * .6);
   };
   addEventListener('scroll', onScroll, {passive:true}); onScroll();
 
+  /* active nav link */
+  const io0 = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+  }), {rootMargin:'-45% 0px -50% 0px'});
+  links.forEach(a => { const s = $(a.getAttribute('href')); if (s) io0.observe(s); });
+
   /* mobile menu */
-  const menu = document.getElementById('mmenu'), burger = document.getElementById('burger');
+  const menu = $('#mmenu'), burger = $('#burger');
   const setMenu = open => {
     if (open) menu.hidden = false;
     requestAnimationFrame(() => menu.classList.toggle('open', open));
     burger.setAttribute('aria-expanded', open);
+    document.body.classList.toggle('menu-open', open);
     document.body.style.overflow = open ? 'hidden' : '';
-    if (!open) setTimeout(() => { if (!menu.classList.contains('open')) menu.hidden = true; }, 500);
+    if (open) $('#closeMenu').focus();
+    else setTimeout(() => { if (!menu.classList.contains('open')) menu.hidden = true; }, 500);
   };
   burger.onclick = () => setMenu(true);
-  document.getElementById('closeMenu').onclick = () => setMenu(false);
+  $('#closeMenu').onclick = () => { setMenu(false); burger.focus(); };
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
-  /* hero video: pause option, respect reduced motion, subtle scroll zoom */
-  const vid = document.getElementById('heroVideo'), vt = document.getElementById('vidToggle'), hero = document.querySelector('.hero');
+  /* open/closed indicator (Belgian time, Mon–Fri 9–17) */
+  const openNow = (() => {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-GB', {timeZone:'Europe/Brussels', weekday:'short', hour:'2-digit', minute:'2-digit', hourCycle:'h23'}).formatToParts(new Date()).map(x => [x.type, x.value]));
+    const mins = +p.hour * 60 + +p.minute;
+    return !['Sat','Sun'].includes(p.weekday) && mins >= 540 && mins < 1020;
+  })();
+  $('#openDot').classList.toggle('off', !openNow);
+  $('#openNow').textContent = openNow ? '· nu open' : '· nu gesloten';
+  $('#openNow').style.color = openNow ? 'var(--accent-ink)' : 'var(--muted)';
+
+  /* hero video */
+  const vid = $('#heroVideo'), vt = $('#vidToggle'), hero = $('.hero');
   const playIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5l12 7-12 7z"/></svg>', pauseIcon = vt.innerHTML;
-  const setPlaying = on => { on ? vid.play().catch(()=>{}) : vid.pause(); vt.innerHTML = on ? pauseIcon : playIcon; vt.setAttribute('aria-label', on ? 'Video pauzeren' : 'Video afspelen'); };
-  if (reduce) setPlaying(false);
-  vt.onclick = () => setPlaying(vid.paused);
-  new IntersectionObserver(([e]) => { if (vt.getAttribute('aria-label') === 'Video pauzeren') e.isIntersecting ? vid.play().catch(()=>{}) : vid.pause(); }).observe(hero);
-  if (!reduce) addEventListener('scroll', () => { const k = Math.min(1, scrollY / innerHeight); vid.style.setProperty('--zoom', 1.06 + k * .08); }, {passive:true});
+  let userPaused = reduce;
+  const render = () => { vt.innerHTML = vid.paused ? playIcon : pauseIcon; vt.setAttribute('aria-label', vid.paused ? 'Video afspelen' : 'Video pauzeren'); };
+  if (reduce) vid.pause();
+  vid.addEventListener('play', render); vid.addEventListener('pause', render);
+  vt.onclick = () => { userPaused = !vid.paused; userPaused ? vid.pause() : vid.play().catch(() => {}); };
+  new IntersectionObserver(([e]) => { if (!userPaused) e.isIntersecting ? vid.play().catch(() => {}) : vid.pause(); }).observe(hero);
+  if (!reduce) addEventListener('scroll', () => { if (scrollY < innerHeight) vid.style.setProperty('--zoom', 1.04 + scrollY / innerHeight * .08); }, {passive:true});
 
   /* reveal on scroll */
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12, rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+  $$('.reveal').forEach(el => io.observe(el));
 
-  /* path finder tabs (with arrow-key support) */
-  const tabs = [...document.querySelectorAll('.choice')];
-  const select = t => {
-    tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
-      const p = document.getElementById(x.getAttribute('aria-controls')); p.hidden = !on; p.classList.toggle('active', on); });
-  };
+  /* finder tabs */
+  const tabs = $$('.choice');
+  const select = t => tabs.forEach(x => {
+    const on = x === t, p = $('#' + x.getAttribute('aria-controls'));
+    x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; p.hidden = !on; p.classList.toggle('active', on);
+  });
   tabs.forEach((t, i) => {
     t.addEventListener('click', () => select(t));
     t.addEventListener('keydown', e => {
@@ -786,46 +995,145 @@ footer{background:var(--ink);color:#fff;padding:80px 0 40px;border-top:1px solid
     });
   });
 
-  /* sticky included counter */
-  const incs = document.querySelectorAll('.inc'), incN = document.getElementById('incN');
+  /* tour gallery: drag, arrows, progress */
+  const tour = $('#tour'), bar = $('#tourBar');
+  const step = () => tour.querySelector('.shot').offsetWidth + 18;
+  $('#tourPrev').onclick = () => tour.scrollBy({left:-step(), behavior:'smooth'});
+  $('#tourNext').onclick = () => tour.scrollBy({left:step(), behavior:'smooth'});
+  const upd = () => { const max = tour.scrollWidth - tour.clientWidth, f = max > 0 ? tour.scrollLeft / max : 0; bar.style.width = '20%'; bar.style.transform = `translateX(${f * 400}%)`; };
+  tour.addEventListener('scroll', upd, {passive:true}); upd();
+  let down = false, sx = 0, sl = 0, moved = false;
+  tour.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; moved = false; sx = e.clientX; sl = tour.scrollLeft; tour.classList.add('drag'); });
+  addEventListener('pointermove', e => { if (!down) return; const dx = e.clientX - sx; if (Math.abs(dx) > 4) moved = true; tour.scrollLeft = sl - dx; });
+  addEventListener('pointerup', () => { if (!down) return; down = false; tour.classList.remove('drag'); });
+  tour.addEventListener('click', e => { if (moved) e.preventDefault(); }, true);
+  tour.addEventListener('keydown', e => { if (e.key === 'ArrowRight') $('#tourNext').click(); if (e.key === 'ArrowLeft') $('#tourPrev').click(); });
+
+  /* included counter */
+  const incs = $$('.inc'), incN = $('#incN');
   const io2 = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) { incs.forEach(x => x.classList.remove('active')); e.target.classList.add('active'); incN.textContent = String(e.target.dataset.i).padStart(2,'0'); }
+    if (e.isIntersecting) { incs.forEach(x => x.classList.remove('active')); e.target.classList.add('active'); incN.textContent = String(e.target.dataset.i).padStart(2, '0'); }
   }), {rootMargin:'-45% 0px -45% 0px'});
   incs.forEach(el => io2.observe(el));
 
-  /* before/after compare */
-  const cmp = document.getElementById('compare'), after = document.getElementById('after'), handle = document.getElementById('handle'), hb = handle.querySelector('button');
+  /* privacy compare */
+  const cmp = $('#compare'), after = $('#after'), handle = $('#handle'), hb = handle.querySelector('button');
   const setPos = pct => { pct = Math.max(4, Math.min(96, pct)); after.style.clipPath = `inset(0 0 0 ${pct}%)`; handle.style.left = pct + '%'; hb.setAttribute('aria-valuenow', Math.round(pct)); };
   let drag = false;
   const move = e => { const r = cmp.getBoundingClientRect(); setPos((e.clientX - r.left) / r.width * 100); };
-  cmp.addEventListener('pointerdown', e => { drag = true; cmp.setPointerCapture(e.pointerId); move(e); });
+  cmp.addEventListener('pointerdown', e => { if (innerWidth <= 600) return; drag = true; cmp.setPointerCapture(e.pointerId); move(e); });
   cmp.addEventListener('pointermove', e => drag && move(e));
   cmp.addEventListener('pointerup', () => drag = false);
-  hb.addEventListener('keydown', e => { const cur = +hb.getAttribute('aria-valuenow'); if (e.key === 'ArrowLeft') setPos(cur - 5); if (e.key === 'ArrowRight') setPos(cur + 5); });
-  // gentle auto-hint once visible
-  const io3 = new IntersectionObserver(es => { if (es[0].isIntersecting && !reduce) { let t = 0; const a = () => { t += .02; setPos(50 + Math.sin(t * Math.PI) * 22); if (t < 1) requestAnimationFrame(a); else setPos(50); }; setTimeout(a, 500); io3.disconnect(); } }, {threshold:.6});
+  hb.addEventListener('keydown', e => { const c = +hb.getAttribute('aria-valuenow'); if (e.key === 'ArrowLeft') setPos(c - 5); if (e.key === 'ArrowRight') setPos(c + 5); });
+  const io3 = new IntersectionObserver(es => { if (es[0].isIntersecting && !reduce && innerWidth > 600) { let t = 0; const a = () => { if (drag) return; t += .02; setPos(50 + Math.sin(t * Math.PI) * 22); if (t < 1) requestAnimationFrame(a); else setPos(50); }; setTimeout(a, 500); io3.disconnect(); } }, {threshold:.6});
   io3.observe(cmp);
 
-  /* count-up numbers */
+  /* count-up */
   const io4 = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return; io4.unobserve(e.target);
-    const el = e.target, end = +el.dataset.count, start = end > 1000 ? end - 40 : 0, t0 = performance.now();
     if (reduce) return;
-    const step = now => { const k = Math.min(1, (now - t0) / 1400), v = Math.round(start + (end - start) * (1 - Math.pow(1 - k, 3))); el.textContent = v; if (k < 1) requestAnimationFrame(step); };
-    requestAnimationFrame(step);
+    const el = e.target, end = +el.dataset.count, start = end > 1000 ? end - 30 : 0, t0 = performance.now();
+    const tick = now => { const k = Math.min(1, (now - t0) / 1300); el.textContent = Math.round(start + (end - start) * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
   }), {threshold:.6});
-  document.querySelectorAll('[data-count]').forEach(el => io4.observe(el));
+  $$('[data-count]').forEach(el => io4.observe(el));
 
-  /* lead form -> opens mail client (replace with real endpoint) */
-  document.getElementById('leadForm').addEventListener('submit', e => {
-    e.preventDefault();
-    const f = e.target;
-    if (!f.reportValidity()) return;
-    const d = new FormData(f);
-    const body = `Interesse: ${d.get('dienst')}%0D%0ANaam: ${encodeURIComponent(d.get('naam'))}%0D%0ATelefoon: ${encodeURIComponent(d.get('tel'))}%0D%0AE-mail: ${encodeURIComponent(d.get('mail'))}%0D%0A%0D%0A${encodeURIComponent(d.get('msg') || '')}`;
-    location.href = `mailto:info@offirent.be?subject=${encodeURIComponent('Aanvraag ' + d.get('dienst'))}&body=${body}`;
-    document.getElementById('formOk').style.display = 'block';
+  /* any [data-dienst] link pre-selects the form */
+  const form = $('#leadForm');
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-dienst]'); if (!a) return;
+    const r = form.querySelector(`input[name="dienst"][value="${a.dataset.dienst}"]`); if (r) r.checked = true;
+    if (a.dataset.msg && !$('#msg').value) $('#msg').value = a.dataset.msg;
+    setTimeout(() => $('#naam').focus({preventScroll:true}), 700);
   });
+
+  /* lead form -> Netlify Forms, mailto fallback */
+  const msgEl = $('#formMsg'), btn = $('#leadBtn');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    msgEl.className = 'form-msg'; msgEl.textContent = '';
+    if (!form.reportValidity()) return;
+    btn.disabled = true;
+    const data = new FormData(form);
+    try {
+      const res = await fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(data).toString()});
+      if (!res.ok) throw new Error(res.status);
+      form.reset();
+      msgEl.className = 'form-msg ok'; msgEl.textContent = 'Bedankt! We nemen binnen 48 uur (werkdagen) contact met je op.';
+    } catch {
+      const body = ['Interesse: ' + data.get('dienst'), 'Naam: ' + data.get('naam'), 'Telefoon: ' + data.get('telefoon'), 'E-mail: ' + data.get('email'), '', data.get('bericht') || ''].join('\n');
+      msgEl.className = 'form-msg err'; msgEl.innerHTML = 'Versturen lukte niet. <a href="mailto:info@offirent.be?subject=' + encodeURIComponent('Aanvraag ' + data.get('dienst')) + '&body=' + encodeURIComponent(body) + '" style="text-decoration:underline">Stuur het via e-mail</a> of bel 013 26 10 10.';
+    } finally { btn.disabled = false; }
+  });
+
+  /* ---------- chat ---------- */
+  const chat = $('#chat'), log = $('#chatLog'), input = $('#chatInput'), cform = $('#chatForm'), chips = $('#chatChips'), fab = $('#chatFab');
+  let history = store.get('offirent-chat') || [];
+  let busy = false;
+  const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const fmt = s => esc(s)
+    .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
+    .replace(/(013 ?26 ?10 ?10|\+32 ?13 ?26 ?10 ?10)/g, '<a href="tel:+3213261010">$1</a>')
+    .replace(/info@offirent\.be/g, '<a href="mailto:info@offirent.be">info@offirent.be</a>')
+    .replace(/(aanvraagformulier|formulier)/gi, '<a href="#start" data-close-chat>$1</a>');
+  const add = (role, text) => {
+    const d = document.createElement('div');
+    d.className = 'msg ' + (role === 'user' ? 'user' : 'bot');
+    d.innerHTML = role === 'user' ? esc(text) : fmt(text);
+    log.appendChild(d); log.scrollTop = log.scrollHeight;
+    return d;
+  };
+  const greet = 'Hallo! 👋 Ik ben de digitale assistent van offiRent. Vraag me gerust iets over een virtueel kantoor, flexplek, vergaderzaal of onze locatie in Herk-de-Stad.';
+  const renderLog = () => { log.innerHTML = ''; add('bot', greet); history.forEach(m => add(m.role, m.content)); chips.hidden = history.length > 0; };
+
+  // Offline answers, used when the AI endpoint is unreachable.
+  const faq = [
+    [/prijs|kost|€|euro|tarief|duur/i, 'Een virtueel kantoor (maatschappelijke zetel) start **vanaf €80 per maand**, en starters kunnen per kwartaal betalen. Voor andere prijzen maakt het team je graag een voorstel: bel 013 26 10 10 of gebruik het formulier.'],
+    [/legaal|wettelijk|mag dat|toegelaten|erkend/i, 'Ja. offiRent is een **erkend dienstverlener**: je maatschappelijke zetel bij ons registreren is volledig in orde, voor eenmanszaken en vennootschappen. Je boekhouder kan de formaliteiten bevestigen.'],
+    [/post|brief|pakket/i, 'We ontvangen je zakelijke post en sturen ze **gratis door**. De precieze afspraken maken we samen bij je aanvraag.'],
+    [/vergader|zaal|meeting/i, 'Onze vergaderzaal biedt plaats aan **10 personen**. Bij een virtueel kantoor kan je ze tot 4 keer per jaar gebruiken. Voor beschikbaarheid: bel 013 26 10 10 of gebruik het formulier.'],
+    [/waar|adres|locatie|route|parking|laadpaal/i, 'We zitten aan de **Steenweg 3, 3540 Herk-de-Stad**, met ruime parking en een elektrische laadpaal. Bereikbaar ma–vr van 09:00 tot 17:00.'],
+    [/uur|open|wanneer|bereikbaar/i, 'We zijn bereikbaar van **maandag tot vrijdag, 09:00–17:00**. Aanvragen beantwoorden we binnen 48 uur op werkdagen.'],
+    [/therap/i, 'Onze therapieruimte is rustig en discreet en **per uur** te boeken. Bel 013 26 10 10 voor beschikbaarheid.'],
+    [/laptop/i, 'We verhuren laptops, **ook in grote aantallen** — voor trainingen, beurzen of tijdelijke teams. Laat via het formulier weten hoeveel je er nodig hebt.'],
+    [/flex|dagkantoor|cowork|bureau|vast kantoor|kantoor huren/i, 'Je kan bij ons terecht voor een **dagkantoor (flexplek)** of een **vast, volledig ingericht kantoor**. Kom gerust eens kijken — plan een rondleiding via het formulier.'],
+    [/nederland|buitenland|belg/i, 'Ja, ook buitenlandse (o.a. Nederlandse) bedrijven krijgen bij ons een **echt zakelijk adres in België**. We informeren je graag over de voorwaarden.']
+  ];
+  const offline = q => (faq.find(([re]) => re.test(q)) || [0, 'Goede vraag! Daar helpt het team je het best mee verder: bel **013 26 10 10** (ma–vr 9–17u), mail info@offirent.be of laat je gegevens achter via het formulier.'])[1];
+
+  const send = async text => {
+    text = text.trim(); if (!text || busy) return;
+    busy = true; cform.querySelector('button').disabled = true; chips.hidden = true;
+    history.push({role:'user', content:text}); add('user', text);
+    const typing = document.createElement('div'); typing.className = 'msg bot typing'; typing.innerHTML = '<i></i><i></i><i></i>'; typing.setAttribute('aria-label', 'Assistent typt'); log.appendChild(typing); log.scrollTop = log.scrollHeight;
+    let reply;
+    try {
+      const ctrl = new AbortController(); const to = setTimeout(() => ctrl.abort(), 30000);
+      const res = await fetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({messages:history.slice(-12)}), signal:ctrl.signal});
+      clearTimeout(to);
+      const j = await res.json().catch(() => ({}));
+      reply = res.ok && j.reply ? j.reply : offline(text);
+    } catch { reply = offline(text); }
+    typing.remove();
+    history.push({role:'assistant', content:reply}); add('bot', reply);
+    store.set('offirent-chat', history.slice(-20));
+    busy = false; cform.querySelector('button').disabled = false; input.focus();
+  };
+
+  const openChat = () => {
+    chat.classList.add('open'); chat.setAttribute('aria-hidden', 'false'); fab.classList.add('hidden'); fab.setAttribute('aria-expanded', 'true');
+    if (!log.childElementCount) renderLog();
+    setTimeout(() => input.focus(), 250);
+  };
+  const closeChat = () => { chat.classList.remove('open'); chat.setAttribute('aria-hidden', 'true'); fab.classList.remove('hidden'); fab.setAttribute('aria-expanded', 'false'); };
+  document.addEventListener('click', e => {
+    if (e.target.closest('[data-open-chat]')) openChat();
+    if (e.target.closest('[data-close-chat]')) closeChat();
+  });
+  $('#chatClose').onclick = () => { closeChat(); fab.focus(); };
+  addEventListener('keydown', e => { if (e.key === 'Escape') { if (chat.classList.contains('open')) closeChat(); if (menu.classList.contains('open')) setMenu(false); } });
+  cform.addEventListener('submit', e => { e.preventDefault(); const v = input.value; input.value = ''; send(v); });
+  chips.addEventListener('click', e => { const b = e.target.closest('button'); if (b) send(b.textContent); });
 })();
 </script>
 </body>
