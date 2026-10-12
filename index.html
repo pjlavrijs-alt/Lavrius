@@ -300,20 +300,21 @@ h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size
 .acc .a a{color:var(--accent-ink);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 
 /* reviews */
-.reviews{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;align-items:stretch;margin-top:48px}
+.reviews{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:20px;align-items:stretch;margin-top:48px}
 @media (max-width:900px){.reviews{grid-template-columns:1fr}}
 .g-card{border-radius:var(--radius);background:var(--ink);color:#fff;padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;position:relative;overflow:hidden}
 .g-card .g{width:56px;height:56px;border-radius:16px;background:#fff;display:grid;place-items:center}
 .g-card h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(24px,2.6vw,34px);line-height:1.05}
 .g-card p{color:var(--muted-dark)}
 .g-card .score{display:flex;align-items:center;gap:14px}
-.g-card .score b{font-family:var(--display);font-weight:400;font-size:56px;line-height:1}
+.g-card .score b{font-family:var(--display);font-weight:400;font-size:64px;line-height:1}
+.g-card .score p{font-size:14px;margin-top:4px}
 .stars{display:inline-flex;gap:2px;color:#fbbc04}
 .g-card .acts{display:flex;gap:10px;flex-wrap:wrap}
 .quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-@media (max-width:600px){.quotes{grid-template-columns:1fr}}
+@media (max-width:600px){.quotes{grid-template-columns:1fr}.quote:nth-child(n+4){display:none}}
 .quote{border-radius:var(--radius);background:var(--white);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:12px}
-.quote p{font-size:16px}
+.quote p{font-size:15px;flex:1}
 .quote footer{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;background:none;padding:0;border:0;color:var(--ink)}
 .quote footer i{width:34px;height:34px;border-radius:50%;background:var(--accent-soft);color:var(--accent-ink);display:grid;place-items:center;font-style:normal;font-weight:800}
 .quote footer small{display:block;color:var(--muted);font-weight:500}
@@ -537,7 +538,7 @@ footer{background:var(--ink);color:#fff;padding:72px 0 36px;border-top:1px solid
     <div class="hero-proof">
       <span><svg class="ico-i"><use href="#i-check"/></svg>Virtueel kantoor vanaf €80/maand</span>
       <span><svg class="ico-i"><use href="#i-check"/></svg>Antwoord binnen 48u</span>
-      <span><svg class="ico-i"><use href="#i-check"/></svg>Parking met laadpaal</span>
+      <a href="#reviews" style="display:inline-flex;align-items:center;gap:8px"><svg class="ico-i" viewBox="0 0 24 24" style="color:#fbbc04"><path fill="currentColor" d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg>4,8 op Google</a>
     </div>
   </div>
   <button class="vid-toggle" id="vidToggle" aria-label="Video pauzeren"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
@@ -695,7 +696,7 @@ footer{background:var(--ink);color:#fff;padding:72px 0 36px;border-top:1px solid
     </div>
     <div class="inc-list">
       <div class="inc" data-i="1"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span><div><h3>Professioneel onthaal</h3><p>Bezoekers worden ontvangen door een mens, niet door een deurbel.</p></div></div>
-      <div class="inc" data-i="2"><span class="ic"><svg width="24" height="24"><use href="#i-mail"/></svg></span><div><h3>Postbeheer + gratis doorsturen</h3><p>Je post komt veilig toe in je eigen brievenbus en wordt gratis naar je doorgestuurd.</p></div></div>
+      <div class="inc" data-i="2"><span class="ic"><svg width="24" height="24"><use href="#i-mail"/></svg></span><div><h3>Postbeheer: gescand en doorgestuurd</h3><p>Je post komt veilig toe in je eigen brievenbus, wordt ingescand en gratis naar je doorgestuurd.</p></div></div>
       <div class="inc" data-i="3"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></span><div><h3>Vergaderruimte, 4× per jaar</h3><p>Ontvang klanten of je boekhouder in een professionele zaal.</p></div></div>
       <div class="inc" data-i="4"><span class="ic"><svg width="24" height="24"><use href="#i-bolt"/></svg></span><div><h3>Ruime parking met laadpaal</h3><p>Geen parkeerstress, en je elektrische wagen laadt terwijl je vergadert.</p></div></div>
       <div class="inc" data-i="5"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M14 20c0-2.2 1.3-4 3-4s4 1.8 4 4"/></svg></span><div><h3>Community Stwg3</h3><p>Een netwerk van ondernemers aan de Steenweg 3. Leren, delen, samenwerken.</p></div></div>
@@ -754,7 +755,7 @@ footer{background:var(--ink);color:#fff;padding:72px 0 36px;border-top:1px solid
       <div class="num"><b><span data-count="1997">1997</span></b><span>Actief sinds — meer dan 25 jaar ervaring</span></div>
       <div class="num"><b><sup>€</sup><span data-count="80">80</span></b><span>Per maand, virtueel kantoor vanaf</span></div>
       <div class="num"><b><span data-count="48">48</span><sup>u</sup></b><span>Maximale reactietijd op werkdagen</span></div>
-      <div class="num"><b><span data-count="10">10</span></b><span>Personen in onze vergaderzaal</span></div>
+      <div class="num"><b>4,8<sup>★</sup></b><span>Gemiddelde score op Google (23 reviews)</span></div>
     </div>
   </div>
 </section>
@@ -1122,16 +1123,21 @@ footer{background:var(--ink);color:#fff;padding:72px 0 36px;border-top:1px solid
   });
 
   /* reviews: vul aan met echte Google-gegevens (score, aantal en letterlijke citaten) */
-  const GOOGLE = { rating: null, count: null, reviews: [
-    // { name: 'Voornaam N.', text: 'Letterlijk citaat van Google', when: '2 maanden geleden' },
+  const GOOGLE = { rating: 4.8, count: 23, reviews: [
+    { name: 'Fabienne de Vries', text: 'Offirent is echt een toplocatie om als bedrijf gevestigd te zijn. Vlotte communicatie omtrent de post, professionele vergaderruimtes beschikbaar en helpen je met alles waar mogelijk!', when: '8 maanden geleden' },
+    { name: 'Raveyard Events', text: 'Heldere en duidelijke communicatie bij de firma offiRent, zeer professioneel. Zondagnacht gemaild en die ochtend al antwoord. Wij gaan voor een virtueel kantoor!', when: '2 jaar geleden' },
+    { name: 'M. Fusers', text: 'We zijn enkele maanden klant van Offirent en ervaren een prettige en vriendelijke samenwerking. Post wordt snel gescand en naar ons gecommuniceerd.', when: '8 maanden geleden' },
+    { name: 'Jelle De Brauwer', text: 'Zeer tevreden over de zeer snelle en correcte afhandeling voor reservaties van vergaderzalen ! Goede locatie en toegankelijkheid, comfort aanwezig, gezellige sfeer,... Meermaals gebruik gemaakt van hun diensten.', when: 'een jaar geleden' },
+    { name: 'paulien de seranno', text: 'De communicatie verloopt vlot, duidelijk en professioneel. Er was een klantgerichte aanpak en efficiënte service tijdens de opstart. Heel tevreden!', when: '11 maanden geleden' },
+    { name: 'Liesbet Joris', text: 'Het is er steeds aangenaam om met mijn cliënten in gesprek te gaan. De flexibiliteit en professionaliteit van de medewerkers van OffiRent zijn ook een grote meerwaarde om met OffiRent samen te werken.', when: '2 jaar geleden' }
   ]};
   const star = '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4-5.7-5 7.5-.7z"/></svg>';
   if (GOOGLE.rating) {
     $('#gScore').hidden = false; $('#gRating').textContent = GOOGLE.rating.toFixed(1).replace('.', ',');
-    $('#gStars').innerHTML = star.repeat(Math.round(GOOGLE.rating)); $('#gCount').textContent = GOOGLE.count ? `${GOOGLE.count} Google-reviews` : 'Google-reviews';
+    $('#gStars').innerHTML = star.repeat(Math.round(GOOGLE.rating)); $('#gCount').textContent = GOOGLE.count ? `op basis van ${GOOGLE.count} Google-reviews` : 'Google-reviews';
   }
   $('#quotes').innerHTML = GOOGLE.reviews.length
-    ? GOOGLE.reviews.slice(0, 4).map(r => `<blockquote class="quote"><span class="stars">${star.repeat(5)}</span><p>“${esc(r.text)}”</p><footer><i>${esc(r.name[0])}</i><span>${esc(r.name)}<small>${esc(r.when || 'Google-review')}</small></span></footer></blockquote>`).join('')
+    ? GOOGLE.reviews.slice(0, 6).map(r => `<blockquote class="quote"><span class="stars">${star.repeat(5)}</span><p>“${esc(r.text)}”</p><footer><i>${esc(r.name[0])}</i><span>${esc(r.name)}<small>Google · ${esc(r.when || '')}</small></span></footer></blockquote>`).join('')
     : '<div class="quotes-empty"><div><b>Al klant bij offiRent?</b>Een review van 30 seconden helpt andere ondernemers kiezen — en helpt ons enorm.</div></div>';
 
   /* ---------- chat ---------- */

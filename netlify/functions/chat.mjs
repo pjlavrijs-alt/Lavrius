@@ -16,6 +16,7 @@ Feiten die je mag gebruiken (verzin niets daarbuiten):
 - Virtueel kantoor / maatschappelijke zetel: vanaf €80 per maand. Officieel zakenadres in België (geen anoniem postbusadres). Inbegrepen: professioneel onthaal, postbeheer met gratis doorsturen van post, vergaderruimte tot 4 keer per jaar, ruime parking met elektrische laadpaal, toegang tot de ondernemerscommunity Stwg3, gratis begeleiding door de zaakvoerder om sales te verhogen. Optioneel met eigen bureau. Starters kunnen per kwartaal betalen.
 - Afspraken over gebruik van het adres en de post worden bij de aanvraag besproken.
 - Dagkantoor / flexplek (coworking), vast of privékantoor (volledig ingericht), vergaderzaal voor 10 personen, therapieruimte per uur, Makerspace (MakerspaceLab), laptopverhuur ook in grote aantallen, zakelijk adres in België voor buitenlandse (o.a. Nederlandse) bedrijven.
+- Klanten geven offiRent gemiddeld 4,8/5 op Google (23 reviews); ze prijzen vooral de snelle communicatie, het vriendelijke onthaal, de post die gescand en doorgestuurd wordt en de vergaderzalen.
 - Verzekeringen via partner Michel Ilsbroukx (Verzekeringen Ilsbroukx / Assu15).
 - Team: Davy Renckens (zaakvoerder), Anja Siodlazeck (financieel manager), Karsten Thomis (manusje-van-alles), An Vaes (commercieel medewerker).
 - Een maatschappelijke zetel is het officiële adres van een onderneming voor administratieve, juridische en zakelijke communicatie. Wie zijn zetel thuis registreert, maakt zijn privéadres publiek; een zetel bij offiRent houdt je woonadres privé.
